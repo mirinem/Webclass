@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관계선택자</title>
+    <style>
+        .box p{color: red;}
+        div>h2{color: blue;}
+        .a~li{color: green;}
+        .b+li{text-decoration: underline;}
+        form>[for]{color: rebeccapurple;}
+        [checked]+label{font-weight: bold;color: teal;}
+        [class="box"]{border: 1px solid royalblue;}
+        input[type="text"]{background:greenyellow;color: aquamarine;}
+        ol>li:nth-of-type(9){color: lightcoral;background: black;}
+        ol>li:last-of-type{color: red;}
+        ol>li:nth-of-type(2n+1){border: 2px solid gold;}
+    </style>
+</head>
+<body>
+    <h1>관계선택자</h1>
+    <p>선택자부분에 태그의 족보관계를 사용해서 구성할 수 있다</p>
+    <hr>
+    <div class="box">
+        <h2>하위선택자(자손선택자)</h2>
+        <p>선택자부분에서 띄어쓰기를 사용하면 (~안에 포함되어있는 자손중에서) 로 해석한다</p>
+    </div>
+
+    <div class="listbox">
+        <h2>자식선택자</h2>
+        <p>선택자부분에서 ">"를 사용하면 (~안에 포함되어있는 자식중에서)로 해석한다</p>
+        <ul>
+            <li>
+                <h2>list1</h2>
+            </li>
+            <li>
+                <h2>list2</h2>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <h2>다음형제선택자</h2>
+        <p>선택한 태그를 기준으로 다음형제를 선택할 수 있다</p>
+        <p>선택자부분에서 +,~을 사용하여 다음형제를 선택할 수 있다</p>
+        <ul class="lists">
+            <li class="a b">list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li class="b">list4</li>
+            <li>list5</li>
+            <li>list6</li>
+        </ul>
+        <p class="b">선택자부분에서 +를 사용하면 앞에 선택된 태그의 다음형제 하나만 선택한다.</p>
+        <p>선택자부분에서 ~을 사용하면 앞에 선택된 태그의 다음형제 여러개를 선택한다.</p>
+    </div>
+
+    <div class="box">
+        <h2>속성선택자</h2>
+        <p>태그가 갖고있는 속성을 사용하여 선택자를 구성할 수 있다.</p>
+        <form action="#">
+            <label for="userName">이름</label>
+            <input type="text" id="userName">
+            <label for="userPW">비밀번호</label>
+            <input type="password" id="userPW">
+            <input type="checkbox" checked id="autoLogin">
+            <label for="autoLogin">자동로그인</label>
+        </form>
+    </div>
+    
+    <div class="box">
+        <h2>순번선택자</h2>
+        <p>태그가 갖고있는 순서를 이용하여 선택할수 있다.</p>
+        <p>태그명:nth-of-type() 괄호안에는 수식/절대값을 입력하여 선택할 수 있다.</p>
+        <p>태그명:last-co-type/태그명:first-of-type을 통해 마지막과 첫번째를 선택할 수 있다.</p>
+        <ol>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+            <li>list5</li>
+            <li>list6</li>
+            <li>list7</li>
+            <li>list8</li>
+            <li>list9</li>
+            <li>list10</li>
+        </ol>
+    </div>
+</body>
+</html>

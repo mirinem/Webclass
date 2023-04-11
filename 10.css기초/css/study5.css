@@ -1,0 +1,15 @@
+h1{color: red;}
+
+h2#a{color: blue!important;}
+h2{color: red!important;}
+h2#a.title.title2{color: steelblue;}
+h2#a.title{color: chartreuse;}
+h2#a{color: brown;}
+#a{color: red;}
+body div.box>h2.title{color: darkmagenta;}
+div.box>h2.title{color: aqua;}
+div>h2.title{color: coral;}
+h2.title{color: violet;}
+.title{color: black;}
+h2{color: blue;text-decoration: underline;}
+h2{color: green;}

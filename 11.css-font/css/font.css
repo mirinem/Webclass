@@ -1,0 +1,25 @@
+        @font-face {
+            font-family: neurimboGothic;
+            src: url("../font/neurimboGothicRegular.otf");
+        }
+        .myfont1{font-family: neurimboGothic; font-size: 50px;}
+        @font-face {
+            font-family: "태백은하수";
+            src: url("../font/taebeakmilkyway.ttf");
+        }
+        @font-face {
+            font-family: myfont3;
+            src: url(../font/bookk_bold.ttf);
+        }
+        @font-face {
+            font-family: 'NeoDunggeunmoPro-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'KimjungchulMyungjo-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
