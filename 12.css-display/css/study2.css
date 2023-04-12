@@ -14,3 +14,14 @@ h2{border: 1px solid blue;}
     width: 500px;
     box-sizing: border-box;
 }
+.boxc{
+    border: 10px solid red;
+    width: 500px;
+    height: 200px;
+}
+.boxc>li{
+    border:3px solid blue;
+    width: 250px;
+    display: inline-block;
+    box-sizing: border-box;
+}

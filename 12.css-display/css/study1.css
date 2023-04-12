@@ -22,3 +22,12 @@ h1{
     width: 300px;
     height: 200px;
 }
+.listbox{
+    border: 1px solid red;
+}
+.listbox>li{
+    border: 1px solid blue;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
