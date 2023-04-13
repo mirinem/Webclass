@@ -1,0 +1,57 @@
+*{margin: 0;padding: 0;}
+.parent{
+    width: 800px;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+.parent>p{
+    width: auto;
+    border: 10px solid black;
+    padding: 0 50px;
+}
+
+.parent2{
+    width: 800px;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+.parent2>p{
+    width: 800px;
+    border: 10px solid black;
+    padding: 0 50px;
+}
+.box1{
+    border: 5px solid blue;
+    width: 50%;
+}
+.parent3{
+    border: 1px solid green;
+    width: 80%;
+    margin: 0 auto;
+}
+.parent3>p{
+    width: 50%;
+    border: 1px solid gold;
+}
+.parent4{
+    border: 1px solid purple;
+    width: 1000px;
+    margin: 0 auto;
+}
+.parent4>p{
+    border: 10px solid pink;
+    width: 30vw;   
+}
+.parent4>p+p{
+    width: 50vh; 
+}
+
+.box2{
+    border: 5px solid red;
+    width: 200px;
+    height: 200px;
+}
+.box3{
+    border: 5px solid blue;
+    width: 200px;
+}

@@ -34,6 +34,7 @@ ul li:last-of-type{margin-bottom: 0px;}
 }
 
 .box2{
+    width: auto;
     border: 1px solid orange;
     margin-top: 100px;
     padding: 20px 50px;
