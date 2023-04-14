@@ -1,0 +1,51 @@
+*{
+    margin: 0;padding: 0;
+}
+
+.box{
+    margin: 0 auto;
+    width: 800px;
+    height: 600px;
+    padding: 40px;
+    border: 2px solid red;
+    /*background-color: skyblue;
+    background-image: url(../img/cat.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 100px;
+    background-position-y: 100px; 
+    background-position: 100px 100px; */
+    background: skyblue url(../img/cat.jpg) no-repeat  100px 100px;
+}
+
+@font-face {
+    font-family: bookk;
+    src: url(../../11.css-font/font/bookk_bold.ttf);
+}
+.box{font-family: bookk;}
+.box2{font-family: bookk;}
+.box3{font-family: bookk;}
+/* 백그라운드처럼 url 사용하는 경우는 폰트패밀리 등록할때이다. */
+
+.box2{
+    width: 1000px;
+    height: 800px;
+    border: 1px solid blue;
+    margin: 0 auto;
+    /* background: url(../img/cat.jpg) no-repeat right bottom; */
+    background: url(../img/cat.jpg) no-repeat calc(100% - 100px) calc(100% - 50px);
+    }
+
+.box2>h2{
+    border: 1px solid red;
+    width: calc(50% + 50px);
+}
+
+.box3{
+    width: 800px;
+    height: 800px;
+    border: 1px solid green;
+    margin: 0 auto;
+    background: url(../img/cat.jpg) no-repeat 0 0;
+    background-size: contain;
+}
+    
