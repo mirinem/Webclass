@@ -1,0 +1,51 @@
+/* reset */
+*{margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: normal;}
+address,em,i{font-style: normal;}
+strong,b{font-weight: normal;}
+a{text-decoration: none;color: inherit;}
+
+/* common - style */
+html{
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* layout */
+.container{
+    width: 980px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+/* detail */
+.container>p{
+    margin-bottom: 35px;
+}
+
+.container>h3{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+.container .a{
+    margin-top: 100px;
+}
+@font-face {
+    font-family: pulmuone;
+    src: url(../fonts/PulmuoneLOHASBold.woff);
+}
+.container .sign{
+    margin-top: 70px;
+    font-size: 30px;
+    font-family: pulmuone;
+    line-height: 30px; 
+}
+.sign>img{
+    position: relative;
+    left: 20px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+

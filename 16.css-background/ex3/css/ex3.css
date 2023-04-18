@@ -1,0 +1,76 @@
+/* reset */
+*{margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: normal;}
+address,em,i{font-style: normal;}
+strong,b{font-weight: normal;}
+a{text-decoration: none;color: inherit;}
+
+
+/* common - style */
+html{
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* layout */
+.banner{
+    height: 250px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+.container{
+    /*border: 1px solid red;*/
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* detail */
+.container>h2{  
+    font-size: 30px;
+    font-weight: 700;
+    background: url(../예제2/sub_tit_line.gif) repeat-x 0% 50%;
+    margin-bottom: 100px;
+}
+.container>h2 .line{
+    background-color: white; 
+    padding-right:20px;
+}
+
+.container>h1{
+    text-align: center;
+    font-size: 52px;
+    font-family: pulmuone;
+    margin-bottom: 50px;
+    padding: 0 70px;
+}
+.container>h1>span{
+    color: #7EAE4B;
+}
+.contents{
+    margin: 0 auto;
+    width: 640px;
+    text-align: center;
+    padding: 40px 90px 50px;
+    background-color: #F4F4F4;
+    background-clip:padding-box;
+    /* border:1px solid red; - 확인용
+    width:810px;
+    padding: 40px 90px 50px;
+    background: #F4F4F4;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center; */
+}
+.contents>h2{
+    font-size: 35px;
+    font-family: pulmuone;
+    margin-bottom: 25px;
+}
+.contents .a{
+    margin-bottom: 30px;
+}
+
+@font-face {
+    font-family: pulmuone;
+    src: url(../예제2/PulmuoneLOHASBold.woff);
+}
