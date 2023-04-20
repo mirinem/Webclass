@@ -17,16 +17,16 @@
 
 .b{
     width: 200px;
-    height: 300px;
+    height: 200px;
     background: blue;
-    float: right;
+    float: left;
 }
 
 .c{
     width: 200px;
-    height: 400px;
+    height: 200px;
     background: green;
-    float: right;
+    float: left;
 }
 .parent:after{
     content: "";

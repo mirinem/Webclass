@@ -1,0 +1,131 @@
+/* reset */
+
+*{margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: normal;}
+address,em,i{font-style: normal;}
+strong,b{font-weight: normal;}
+a{text-decoration: none;color: inherit;}
+ul,ol{list-style: none;}
+
+/* common */
+html{
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* layout(대략적인 레이아웃: 큰영역 -> 작은영역) */
+.container{
+    border:1px solid red;
+    width: 820px;
+    margin: 0 auto;
+}
+header{border: 3px solid blue;
+    margin-bottom: 16px;
+}
+main{border: 1px solid orange;
+    margin-bottom: 50px;
+}
+footer{}
+
+/* detail */
+
+/* -----------------header-------------------- */
+header{
+    padding-top: 12px;
+    padding-bottom: 5px;
+}
+header h1{margin-bottom: 5px;}
+header p{
+    font-style: italic;
+    color: grey;
+}
+
+/* ----------------- main -------------------- */
+main h3{
+    font-size: 2rem;
+    font-weight: bold;
+}
+main form{
+    border: 1px solid #ddd;
+    background: #eee;
+    /* 16진수 색상 표현법에서 똑같은 문자가 6개가 반복된다면 3자리로 줄여서 표현할 수 있다. */
+    padding: 6px;
+    margin-bottom: 10px;
+}
+main form label,input{vertical-align: middle;}
+.nation{
+    border: 1px solid green;
+}
+.nation>section{
+    border: 1px solid salmon;
+    box-sizing: border-box;
+    float: left;
+    /* float를 사용하여 공중에 띄우게 되면 암묵적으로 display형태는 inline-block으로 변한다.*/
+    width: calc((100% - 40px)/3);
+    margin-right: 20px;
+}
+.nation>section:last-of-type{
+    margin-right: 0;
+}
+.nation:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.nation>section>h2{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+    margin-bottom: 5px;
+}
+.nation>section>ul{}
+.nation>section>ul>li{
+    border: 1px solid red;
+    margin-bottom: 20px;
+}
+.nation>section>ul>li:last-of-type{
+    margin-bottom: 0px;
+}
+.nation>section>ul>li>img{
+    float: left;
+    margin-right: 10px;
+}
+.nation>section>ul>li:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*.imgFrame{float: left;}
+.txtFrame{float: left;}
+.nation>section>ul>li:after{
+    content: "";
+    display: block;
+    clear: both;} - 선생님은 이 방법을 더 추천하심*/
+
+/* -----------------footer-------------------- */
+footer{
+    border: 1px solid #ddd;
+    background: #eee;
+    padding: 6px;
+}
+
+.fLeft{float: left;border: 1px solid gold;}
+.fRight{float: right;border: 1px solid gold;}
+footer:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+footer dl>*{float: left;margin-right: 10px;}
+footer dl>dt{font-weight: bold;}
+footer dl>dd{color: #0555AE;}
+footer dl>dd:nth-of-type(3),
+footer dl>dd:nth-of-type(4){border-left: 1px solid #ccc;padding-left: 10px;}
+footer>dl:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.copy{margin-top: 15px;color: gray;}
+.bc{color: #0555AE;}
+.fRight>*{vertical-align: middle;}
