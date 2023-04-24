@@ -1,0 +1,124 @@
+/*풀이 reset */
+*{margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: normal;}
+address,em,i{font-style: normal;}
+strong,b{font-weight: normal;}
+a{text-decoration: none;color: inherit;}
+ul,ol{list-style: none;}
+
+/* common */
+html{
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* layout */
+.all{
+    width: 920px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+footer{
+    border: 1px solid blue;
+    background: #f0f0f0;
+}
+/* 배경크기를 따로 적용하려면 전체 div영역에서 따로 footer를 밖으로 빼야 가능하다. 하지만 보통 안에 내용은 일정한 너비로 위 다른 영역과 같이 중앙배치하므로, footer안에 두 내용을 잡을 수 있는 div영역을 따로 만들어야 너비를 맞춰 따로 설정할 수 있다.*/
+.fall{
+    border: 1px solid lime;
+    width: 920px;
+    margin: 0 auto;
+}
+
+/* detail */
+/*--------------- header----------------- */
+header{
+    border: 1px solid lime;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{border: 1px solid lime;}
+nav{}
+.lnb{
+    display: flex;border: 1px solid red;
+    justify-content: flex-end;
+    margin-bottom: 30px;}
+.gnb{display: flex;border: 1px solid red;
+    justify-content: flex-end;  }
+.lnb>li{
+    border: 1px solid green;
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 2px 8px;
+}
+.lnb>li:first-of-type{padding-left: 16px;}
+.lnb>li:last-of-type{padding-right: 16px;}
+.gnb>li{
+    border: 1px solid green;
+    padding: 10px 16px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/*--------------- main ----------------- */
+.contents{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+.contents>section{
+    border: 1px solid blue;
+    width: calc((100% - 40px)/3);
+}
+.contents>section>h2{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 14px;
+}
+.contents>section>h2{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+/* .btnMore{
+    float: right;
+    border: 1px solid coral;
+} */
+.notice>li{
+    border: 1px solid coral;
+    margin-bottom: 3px;
+}
+.notice>li:last-of-type{margin-bottom: 0;}
+.notice>li>a{
+    border: 1px solid purple;
+    display: block;
+}
+.notice>li>a>span{
+    float: right;
+}
+.quicklist{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*--------------- footer ----------------- */
+.all{margin-bottom: 34px;}
+.fall{
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+.flogo{border: 1px solid coral;}
+.corinfo{border: 1px solid coral;}
+.footmenu{
+    display: flex;
+    border: 1px solid palevioletred;
+    margin-bottom: 8px;
+}
+.footmenu>li{
+    border: 1px solid green;
+    margin-right: 20px;
+}
+.footmenu>li:last-of-type{margin-right: 0;}
