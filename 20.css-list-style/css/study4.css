@@ -1,0 +1,46 @@
+*{margin: 0; padding: 0;}
+
+.box{
+    border: 1px solid red;
+    width: 300px;
+    height: 300px;
+    /* transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 0s; */
+    transition:
+    width 1s cubic-bezier(1,-0.18, 0.08, 1.18) 0s,
+    height 1s linear 1s,
+    background 1s cubic-bezier(1,-0.18, 0.08, 1.18) 2s,
+    border-radius 0.5s ease 3s;
+}
+.box:hover{
+    width: 500px;
+    height: 500px;
+    background: gold;
+    border-radius: 50%;
+    /* display: inline; */
+}
+
+.menu{
+    border: 1px solid red;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    list-style: none;
+}
+.menu>li{
+    border: 1px solid black;
+    flex: 1;
+    transition: all 0.5s ease 0s;
+    /* text-align: center;
+    line-height: 100px; - 내용이 많아지면 안됨*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu>li:hover{
+    background: black;
+    color: white;
+    flex: 2;   
+}
