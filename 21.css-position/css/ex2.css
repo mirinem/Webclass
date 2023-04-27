@@ -17,13 +17,16 @@ html{font-family: 'Roboto Slab', serif;}
     /* border: 2px solid white; */
     position: absolute;
 
-    /* left: calc(50% - 120px); 
-    top: calc(50% - 60px); */
+    /* (1) */
+    left: calc(50% - 120px); 
+    top: calc(50% - 60px);
     
-    left: 50%;
+     /* (2) */
+    /* left: 50%;
     top: 50%;
     margin-left: -120px;
-    margin-top: -60px;
+    margin-top: -60px; */
+    /* 위의 두 가지 태그 중앙정렬 방법은 높이,너비를 지정해야한다는 단점이 있다. 추후 지정없이 중앙정렬 하는 방법 배움  */
 
     font-size: 7rem;
     color: white;
@@ -44,3 +47,4 @@ html{font-family: 'Roboto Slab', serif;}
     opacity: 0.3;
     /* display: block; */
 }
+/* 🔼영상 바로 위에 투명도가 적용된 어두운 명암을 깔기 위해 ::after를 사용하였다.  */

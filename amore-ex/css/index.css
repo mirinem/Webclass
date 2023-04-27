@@ -1,0 +1,218 @@
+/* reset */
+*{margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: normal;}
+address,em,i{font-style: normal;}
+strong,b{font-weight: normal;}
+a{text-decoration: none;color: inherit;}
+ul,ol{list-style: none;}
+
+
+/* common */
+html{
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* layout */
+.container{
+    /* border: 1px solid black; */
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.background{
+    background: url(../img/bg_body.jpg) no-repeat;
+    background-size: contain;
+}
+
+.background2{
+    background: #2a367e;
+    height: 49vh;
+}
+
+
+/* detail */
+
+/* ------------------header-------------------- */
+header{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+/* .logo{border: 1px solid gold;} */
+.lnb{
+    /* border: 1px solid gold; */
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
+    color: gray;
+}
+.lnb>li{
+    /* border: 1px solid green; */
+    margin: 0 2px;
+    padding: 0 16px 0 5px;
+    background: url(../img/bg_sideMenu.gif) no-repeat 100% 50%;
+}
+.lnb>li:last-of-type{
+    background: none;
+    padding-right: 0;
+    margin-right: 5px;
+}
+.gnb{
+    /* border: 1px solid gold; */
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.gnb>li{
+    /* border: 1px solid green; */
+    margin: 0 30px;
+}
+.gnb>li:last-of-type{
+    margin-right: 15px;
+}
+
+/* ------------------main-------------------- */
+main{
+    /* border: 1px solid blue; */
+    position: relative;
+    padding-bottom: 90px;
+}
+.mainbanner>h1{
+    /* border: 1px solid green; */
+    font-size: 6rem;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to left, #2a367e, #acbff6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 110px 0 60px ;
+}
+
+/* 1 */
+.bannertabnews{
+    /* border: 1px solid green; */
+    width: calc(100%/3);
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+.bannertabnews>dt{
+    /* border: 1px solid purple; */
+    height: 20px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    color:#7c7d7f;
+}
+.bannertabnews>dt.news{
+    border-bottom: 1px solid gray;
+    color: #2a367e;
+}
+.bannertabnews>dd{
+    /* border: 1px solid purple; */
+    position: absolute;
+    top: 40px;left: 0;
+    width: 100%;
+    display: none;
+}
+.bannertabnews>dt.news+dd{
+    display: block;
+}
+.bannertabnews>dd>ul>li{
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    letter-spacing: 0.5px;
+}
+.bannertabnews>dd>ul>li>span{
+    font-weight: bold;
+}
+
+
+/* 2 */
+.contents{
+    border-bottom: 1px solid #4c589e;
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+}
+.contents>article{
+    /* border: 1px solid coral; */
+    height: 200px;
+    margin-top: 30px;
+    margin-right: 60px;
+}
+.contents>article>ol{
+    /* border: 1px solid pink; */
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1px;
+    word-spacing: 6px;
+    margin-top: 20px;
+}
+.contents>article:nth-of-type(2){
+    width: 200px;
+}
+.contents>article>dl{
+    display: flex;
+    position: relative;
+}
+.contents>article>dl>dt{
+    /* border: 1px solid purple; */
+    width: 70px;
+    height: 20px;
+    margin-right: 8px;
+    color: white;
+    background: #1e286c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contents>article>dl>dt.on{
+    background: #3d4fc1;
+    font-weight: bold;
+}
+.contents>article>dl>dd{
+    /* border: 1px solid purple; */
+    position: absolute;
+    top: 35px; left: 0;
+    display: none;
+}
+.contents>article>dl>dt.on+dd{
+    display: block;
+}
+.contents>article:nth-of-type(3)>h3{
+    margin-bottom: 25px;
+}
+
+/* ------------------footer-------------------- */
+footer{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.left{
+    display: flex;
+    align-items: center;
+}
+.left>select{
+    color: white;
+    background: #2a367e;
+    width: 180px;
+    margin-right: 8px;
+}

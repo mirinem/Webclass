@@ -1,0 +1,62 @@
+*{margin: 0;padding: 0;}
+
+
+dl{
+    /* border: 5px solid black; */
+    width: 500px;
+    height: 160px;
+    display: flex;
+    position: relative;
+    /* 기준영역 dl에 설정 - dd position 기준 */
+    align-items: flex-start;
+    background: rgb(174, 174, 247);
+}
+
+dl>dt{
+    border: 1px solid blue;
+    width: calc(100%/3);
+    height: 30px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+dl>dt:hover{
+    background: blue;
+    color: white;
+    font-weight: bold;  
+}
+dl>dt.on{
+    background: blue;
+    color: white;
+    font-weight: bold;  
+}
+dl>dd{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    transition: all 0.5s ease 0s;
+    /* 전환은 변하기 전 태그에 걸어야한다. 
+    transition은 중간수치가 명확할때만 전환스타일을 표시한다. (예 width:300px -> width:500px)*/
+    /* opacity: 0; */
+    height: 0;
+    overflow: hidden;
+}
+
+/* dl>dt:hover+dd{
+    display: block; 
+    height: 100px;
+    opacity: 1;
+} */
+/* dt에 마우스를 올리면 dd의 display:none;을 해제한다 */
+
+
+dl>dt.on+dd{
+    display: block;
+    /* dt에 마우스를 올리면 dd의 display:none;을 해제한다 */
+    /* opacity: 1; */
+    height:100px;
+}
+/* 🔼dt태그에 on클래스가 추가가 되면 다음형제 dd태그는 보이도록 설정이 된다. - css는 html을 감시하고 있다가 태그의 조건이 변경이 되면 변경된 조건으로 스타일을 표현한다. */
