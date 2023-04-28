@@ -5,38 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>아모레퍼시픽</title>
+    <link rel="stylesheet" href="./css/index_answer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="container">
-        <header>
-            <div class="logo">
-                <h1>
-                    <a href="./index.html">
-                        <img src="./img/logo.gif" alt="아모레퍼시픽로고">
-                    </a>
-                </h1>
-            </div>
-            <nav>
-                <ul class="lnb">
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">sitemap</a></li>
-                    <li><a href="#">contact us</a></li>
-                </ul>
-                <ul class="gnb">
-                    <li><a href="#">기업소개</a></li>
-                    <li><a href="#">채용정보</a></li>
-                    <li><a href="#">인사제도</a></li>
-                    <li><a href="#">인재육성</a></li>
-                    <li><a href="#">입사지원</a></li>
-                    <li><a href="#">입사도우미</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="mainBanner">
+        <div class="top">
+            <header class="cw">
+                <div class="logo">
+                    <h1>
+                        <a href="./index.html">
+                            <img src="./img/logo.gif" alt="아모레퍼시픽로고">
+                        </a>
+                    </h1>
+                </div>
+                <nav>
+                    <ul class="lnb">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">sitemap</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                    <ul class="gnb">
+                        <li><a href="#">기업소개</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">인사제도</a></li>
+                        <li><a href="#">인재육성</a></li>
+                        <li><a href="#">입사지원</a></li>
+                        <li><a href="#">입사도우미</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="mainBanner cw">
                 <h2>Asian Beauty Creator</h2>
                 <dl class="bannerTabMenu">
-                    <dt>채용뉴스</dt>
+                    <dt class="on">채용뉴스</dt>
                     <dd>
                         <ul>
                             <li>
@@ -90,10 +94,12 @@
                 </dl>
                 
             </div>
-            <div class="contents">
+        </div>
+        <div class="bottom">
+            <div class="contents cw">
                 <article>
                     <h3>Quick Menu</h3>
-                    <ol>
+                    <ol class="quickList">
                         <li><a href="#">입사지원 ></a></li>
                         <li><a href="#">상시채용 ></a></li>
                         <li><a href="#">지원결과 ></a></li>
@@ -101,8 +107,8 @@
                     </ol>
                 </article>
                 <article>
-                    <dl>
-                        <dt>인재상</dt>
+                    <dl class="tabMenu">
+                        <dt class="on">인재상</dt>
                         <dd>
                             <a href="#">
                                 <img src="./img/img_person.jpg" alt="아모레퍼시픽은 이런인재를 소중히 생각합니다..">
@@ -125,21 +131,21 @@
                     </p>
                 </article>
             </div>
-        </main>
-        <footer>
-            <section>
-                <label for="family">협력사이트</label>
-                <select id="family">
-                    <option>FAMILY SITE</option>
-                </select>
-                <a href="#">개인정보취급방침</a>
-            </section>
-            <div>
-                <p>
-                    <img src="./img/footer_copyright.gif" alt="copyright 2009 amorepacific. all rights reserved amorepacific">
-                </p>
-            </div>
-        </footer>
+            <footer class="cw">
+                <section>
+                    <label for="family">협력사이트</label>
+                    <select id="family">
+                        <option>FAMILY SITE</option>
+                    </select>
+                    <a href="#">개인정보취급방침</a>
+                </section>
+                <div>
+                    <p>
+                        <img src="./img/footer_copyright.gif" alt="copyright 2009 amorepacific. all rights reserved amorepacific">
+                    </p>
+                </div>
+            </footer>
+        </div>
     </div>
 </body>
 </html>
