@@ -1,0 +1,8 @@
+*{margin: 0;padding: 0;}
+i{
+    color: red;
+    transition: all 0.5s ease 0s;
+}
+i:hover{
+    color: blue;
+}
