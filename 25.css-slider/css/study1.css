@@ -1,0 +1,57 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+
+/* layout */
+.station{
+    width: 1440px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.train{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    background: pink;
+    transform: translateX(0px);
+    transition: all 0.5s ease 0s;
+}
+.train>li{
+    flex: 1;
+    /* width: 25%;
+    부모의 너비에 대한 25% */
+    border: 1px solid blue;
+}
+.controler{
+    border: 1px solid red;
+    position: absolute;
+    left: 0;top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.pagination{
+    border: 1px solid blue;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    display: flex;
+}
+.pagination>li{
+    border: 2px solid #fff;
+    width: 10px;height: 10px;
+    border-radius: 50%;
+    font-size: 0;
+    margin-right: 10px;
+    background: black;
+    opacity: 0.5;
+}
+.pagination>li:last-of-type{
+    margin-right: 0;
+}
+.pagination>li.on{opacity: 1;}
