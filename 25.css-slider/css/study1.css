@@ -8,9 +8,11 @@ ul,ol{list-style: none;}
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    /* relative는 공중에 띄우는게 아님 */
 }
 .train{
-    width: 400%;
+    width: calc(400%/2.5);
+    /* 기차의 너비를 보이길 원하는 슬라이드의 갯수로 나누면 됨 */
     height: 100%;
     display: flex;
     background: pink;
@@ -26,6 +28,7 @@ ul,ol{list-style: none;}
 .controler{
     border: 1px solid red;
     position: absolute;
+    /* 기준영역 설정 - 부모태그에 */
     left: 0;top: 50%;
     transform: translateY(-50%);
     width: 100%;
@@ -43,7 +46,7 @@ ul,ol{list-style: none;}
     display: flex;
 }
 .pagination>li{
-    border: 2px solid #fff;
+    /* border: 2px solid #fff; */
     width: 10px;height: 10px;
     border-radius: 50%;
     font-size: 0;

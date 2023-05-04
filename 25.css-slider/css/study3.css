@@ -1,0 +1,80 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+
+/* layout */
+.station{
+    width: 100%;
+    height: 500px;
+    border: 1px solid red;
+    margin: 0 auto;
+    position: relative;
+}
+.train{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.train>li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    border: 1px solid green;
+    opacity: 0;
+    transition: all 1s ease 0s;
+}
+.train>li.show{
+    opacity: 1;
+}
+.train>li .box{
+    border: 1px solid red;
+    width: 600px;
+    position: absolute;
+    left: 50%; bottom: 50px;
+    transform: translate(-100%, 0);
+    color: white;
+    word-break: keep-all;
+    /* 너비 600으로 줄이는 방법 */
+    /* 1.width:600px; left:50%-300px */
+    /* 2.width:600px; transform: translate(-100%,0)*/
+    /* 3.padding-right:600px */
+}
+.box h4{
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+.train>li>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.controler{
+    border: 1px solid orange;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+.pagination{
+    border: 1px solid red;
+    display: flex;
+    position: absolute;
+    left: 50%; bottom: 20px;
+    transform: translateX(-50%);
+}
+.pagination>li{
+    border: 1px solid orange;
+    width: 10px;height: 10px;
+    border-radius: 50%;
+    font-size: 0;
+    margin-right: 10px;
+    background: white;
+    opacity: 0.5;
+}
+.pagination>li:last-of-type{
+    margin-right: 0;
+}
+.pagination>li.on{opacity: 1;}
