@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표예제</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html{font-family: 'Gowun Batang', serif;}
+    </style>
+</head>
+<body>
+    <h1>성적표 예제</h1>
+    <p>퀴즈) 사용자에게 이름과 국어, 영어, 수학 점수를 물어보고 평균점수를 구해서 알림창에 나타내보시오.</p>
+    <p>답안예시 [정현진님의 평균점수는 90점입니다]</p>
+
+    <script>
+        let name = prompt("이름을 입력해주세요.");
+        let korean = Number(prompt("국어점수를 입력해주세요."))
+        let english = Number(prompt("영어점수를 입력해주세요."))
+        let math = Number(prompt("수학점수를 입력해주세요."))
+        let scoreAver = (korean+english+math)/3
+
+        // alert("["+name+"님의 평균점수는 "+(korean+english+math)/3+"입니다.]")
+        // document.write("<h1>"+name+"님의 평균점수는 "+(korean+english+math)/3+"입니다.</h1>")
+
+        alert("["+name+"님의 평균점수는 "+scoreAver+"입니다.]")
+        document.write(`<h1>[${name}님의 평균점수는 ${scoreAver}점입니다.]</h1>`)
+    </script>
+</body>
+</html>
