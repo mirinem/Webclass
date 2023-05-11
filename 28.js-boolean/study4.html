@@ -23,6 +23,13 @@
         console.log(Math.min(1,2,3,4,5)) // 최소값구하기
         console.log(Math.max(2,4,100)) //최대값구하기
         console.log(Math.round(Math.random()*5))
+
+        let r = Math.round(Math.random()*255)
+        let g = Math.round(Math.random()*255)
+        let b = Math.round(Math.random()*255)
+        let a = Math.random()
+        console.log(r,g,b,a)
+        document.write(`<h1 style="background:rgba(${r},${g},${b},${a}); color:white">반갑습니다. 오늘도 열심히 해봅시다!</h1>`)
     </script>
 </body>
 </html>

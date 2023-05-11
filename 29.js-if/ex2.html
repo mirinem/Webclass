@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비만도예제2</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
-    <title>비만도예제</title>
     <style>
-        span{color: red;}
-        h1{font-family: 'Gowun Batang', serif;}
+        html{font-family: 'Gowun Batang', serif;}
+
+        table{border-collapse: collapse;}
+        .gradeStyle{width: 500px; margin: 0 auto; margin-top: 50px;}
+        .gradeStyle caption{font-size: 2rem;font-weight: bold;margin-bottom: 20px;}
+        .gradeStyle th{border: 1px solid #000;padding: 5px 0;border-left: none;}
+        .gradeStyle td{border: 1px solid #000;padding: 5px 0;text-align: center;border-right: none;}
+        .gradeStyle tr:last-of-type>th{background: #000;color: #fff;}
+        .gradeStyle tr:last-of-type>td{background: #000;color: aqua;}
+        h1{font-style: italic;}
+        span{color: aqua;}
     </style>
 </head>
 <body>
@@ -26,15 +35,12 @@
                     18.5이상 22.9이하라면 정상
                     18.5미만이라면 저체중
         완성예시) 당신의 키는 170센티미터이고 몸무게는 70kg입니다. bmi수치는 24.2이며 과체중입니다.
-    </pre>
+    </pre>    
     <script>
-        //let bmiResult = bmi>=25?"비만":
-        //                bmi>=23 && bmi<=24.9?"과체중":
-        //                bmi>=18.5 && bmi<=22.9?"정상":"저체중"
-
+        let name = prompt("이름을 입력해주세요.");
         let height = Number(prompt("키를 입력해주세요"))
         let weight = Number(prompt("몸무게를 입력해주세요"))
-        let bmi = weight/(Math.pow((height/100),2))
+        let bmi = Math.round(weight/(Math.pow((height/100),2)))
         let bmiResult;
         if(bmi>=25){
             bmiResult="비만"
@@ -46,6 +52,26 @@
             bmiResult="저체중"
         }
         document.write(`<h1>당신의 키는 ${height}cm이고 몸무게는 ${weight}kg입니다. bmi수치는 ${bmi}이며 <span>${bmiResult}</span>입니다.</h1>`)
+
+        document.write(`<table class="gradeStyle">
+        <caption>${name}님의 비만도 검사결과🧍🏻‍♀️🧍🏻‍♂️⚖</caption>
+        <tr>
+            <th>신장</th>
+            <td>${height}cm</td>
+        </tr>
+        <tr>
+            <th>체중</th>
+            <td>${weight}kg</td>
+        </tr>
+        <tr>
+            <th>bmi</th>
+            <td>${bmi}</td>
+        </tr>
+        <tr>
+            <th>결과</th>
+            <td>${bmiResult}</td>
+        </tr>
+    </table>`)
     </script>
 </body>
 </html>
