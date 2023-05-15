@@ -1,0 +1,113 @@
+/* reset */
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+a{text-decoration: none;color: inherit;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: normal;}
+
+
+/* common */
+html{font-size: 14px; font-family: 'Noto Sans KR', sans-serif;}
+.container{
+    width: 1040px; 
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+
+/* layout */
+.container>h2{
+    /* border: 1px solid aqua; */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.movieChart{
+    /* border: 1px solid red; */
+    display: flex;
+
+}
+.movieChart>li{
+    /* border: 1px solid blue; */
+    width: calc(20% - 30px);
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+.movieChart>li>figure>img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.movieChart>li>figure{
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 230px;
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+}
+.movieChart>li>figure::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;top: 0;
+    background: linear-gradient(3deg, black, transparent);
+}
+.movieChart>li:hover>figure::after{
+    display: none;
+}
+.movieChart>li>figure>span{
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 10px; bottom: -15px;
+    color: #fff;
+    font-size: 3.5rem;
+    font-style: italic;
+    z-index: 10;
+    /* z-index는 형제끼리 비교 가능 */
+}
+.movieChart>li:hover>figure>span{
+    display: none;
+}
+.hiddenMenu{    
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.movieChart>li:hover .hiddenMenu{
+    display: flex;
+}
+
+.hiddenMenu>li{
+    width: 65%;
+    padding: 8px 0;
+    text-align: center;
+    margin: 5px 0;
+    border-radius: 6px;
+}
+.hiddenMenu>li:hover{
+    opacity: 0.8;
+}
+.hiddenMenu>li:nth-of-type(1){
+    background: #fff;
+    color: #000;
+}
+.hiddenMenu>li:nth-of-type(2){
+    background: #fb4357;
+    color: #fff;
+}
+.movieChart>li>h3{
+    /* border: 1px solid blue; */
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
