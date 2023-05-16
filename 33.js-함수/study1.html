@@ -44,27 +44,31 @@
         // let result = alert("test")
         // alert(result)
         // alert("TEST")
+        // function b(name1,name2){
+        //     alert(name1+"과"+name2)
+        // }
+        // b("정현진","임규림")
     </script>
     <h2>함수안에서 return</h2>
     <p>함수안에서 return구문을 쓰게되면 return구문 오른쪽의 결과를 함수가 사용됐던 그 자리에 남기고 함수는 그 즉시 종료된다.</p>
     <script>
-        // function sumNumber(n1,n2){
-        //     return n1+n2
-        //     alert("TEST")
-        // }
-        // let result = sumNumber(3,4) + sumNumber(4,6)
-        // alert(result)
+        function sumNumber(n1,n2){
+            return n1+n2
+            alert("TEST")
+        }
+        let result = sumNumber(3,4) + sumNumber(4,6)
+        alert(result)
 
-        function abc(){
-            return "abc"
-        }
-        // alert(abc()+"DEF")
-        function getName(name){
-            document.write(name+"님 환영합니다.")
-            return name
-        }
-        let personName = getName("정현진")
-        alert(personName)
+        // function abc(){
+        //     return "abc"
+        // }
+        // // alert(abc()+"DEF")
+        // function getName(name){
+        //     document.write(name+"님 환영합니다.")
+        //     return name
+        // }
+        // let personName = getName("정현진")
+        // alert(personName)
     </script>
 </body>
 </html>
