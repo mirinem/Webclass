@@ -1,0 +1,45 @@
+.btnPopup{
+    border: 1px solid black;
+    position: fixed;
+    right: 10px; top: 10px;
+    padding: 4px 20px;
+    cursor: pointer;
+}
+
+/* 보이는 상태 먼저 배치 */
+.hiddenPopup{
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,255,0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 200px;
+    box-sizing: border-box;
+    /* display: none; */
+    transition: all 1s ease 0s;
+    opacity: 0;
+    pointer-events: none;
+    /*투명도는 단순히 보이지 않는거지 공간을 차지하고 있기때문에 이전의 버튼들이 눌러지지 않을 수 있다. 마우스에 걸리지 않게 pointer-events 값을 none을 해주면 마우스커서에 반응하지 못하게 함*/
+    z-index: 100;
+    transform: translateX(-100%);
+}
+.hiddenPopup.show{
+    /* display: flex; */
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스커서에 반응함 */
+    transform: translateX(0%);
+}
+
+.btnPopupClose{
+    border: 1px solid white;
+    padding: 4px 20px;
+    position: absolute;
+    right: 10px;top: 10px;
+    cursor: pointer;
+}
