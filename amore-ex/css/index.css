@@ -96,7 +96,7 @@ main{
 }
 
 /* 1 */
-.bannertabnews{
+.recruit_news .bannerTabMenu{
     /* border: 1px solid green; */
     width: calc(100%/3);
     height: 100px;
@@ -104,38 +104,42 @@ main{
     align-items: flex-start;
     position: relative;
 }
-.bannertabnews>dt{
+.recruit_news .bannerTabMenu>dt{
     /* border: 1px solid purple; */
     height: 20px;
-    padding: 0 10px;
+    padding: 0 9px;
+    padding-bottom: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 13px;
     font-weight: bold;
     color:#7c7d7f;
+    cursor: pointer;
+    text-align: center;
 }
-.bannertabnews>dt.news{
-    border-bottom: 1px solid gray;
+.recruit_news .bannerTabMenu>dt.on{    
+    border-bottom: 2px solid gray;
     color: #2a367e;
 }
-.bannertabnews>dd{
+.recruit_news .bannerTabMenu>dd{
     /* border: 1px solid purple; */
     position: absolute;
     top: 40px;left: 0;
     width: 100%;
     display: none;
 }
-.bannertabnews>dt.news+dd{
+.recruit_news .bannerTabMenu>dt.on +dd{
     display: block;
 }
-.bannertabnews>dd>ul>li{
+
+.recruit_news .bannerTabMenu>dd>ul>li{
     display: flex;
     justify-content: space-between;
     color: gray;
     letter-spacing: 0.5px;
 }
-.bannertabnews>dd>ul>li>span{
+.recruit_news .bannerTabMenu>dd>ul>li>span{
     font-weight: bold;
 }
 
@@ -164,11 +168,12 @@ main{
 .contents>article:nth-of-type(2){
     width: 200px;
 }
-.contents>article>dl{
+.contents>article>dl.tabMenu{
+    width: 100%;
     display: flex;
     position: relative;
 }
-.contents>article>dl>dt{
+.contents .tabMenu>dt{
     /* border: 1px solid purple; */
     width: 70px;
     height: 20px;
@@ -178,18 +183,20 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    text-align: center;
 }
-.contents>article>dl>dt.on{
+.contents .tabMenu>dt.on{
     background: #3d4fc1;
     font-weight: bold;
 }
-.contents>article>dl>dd{
+.contents .tabMenu>dd{
     /* border: 1px solid purple; */
     position: absolute;
     top: 35px; left: 0;
     display: none;
 }
-.contents>article>dl>dt.on+dd{
+.contents .tabMenu>dt.on +dd{
     display: block;
 }
 .contents>article:nth-of-type(3)>h3{
