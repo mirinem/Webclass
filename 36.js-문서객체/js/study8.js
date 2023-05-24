@@ -22,7 +22,7 @@ window.onload = function(){
             for(let j=0; j<tabTitles.length; j++){
                 tabTitles[j].classList.remove("on")
             }
-            this.classList.add("on")
+            this.classList.add("on")  // 여기서 this는 클릭한 리스트 
             tabDes.innerHTML = tabDescription[i]
             // 자바스크립트에 입력한 tabDescription의 내용을 html로 보내주는 매크로
         })
