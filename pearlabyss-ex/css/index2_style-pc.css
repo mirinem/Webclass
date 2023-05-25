@@ -1,0 +1,400 @@
+@media (min-width:769px){
+    /* layout */
+.container{}
+
+header{
+    /* border: 5px solid red; */
+    position: fixed;
+    left: 0;top: 0;
+    /* 구체적인 좌표를 꼭 입력해야한다. */
+    width: 100%;
+    color: #fff;
+    z-index: 1000;
+    height: 70px;
+    /* z-index은 형제태그가 포지션 값이 있어야 적용이 된다. */
+    transition: all 0.5s ease 0s ;
+    overflow: hidden;
+}
+header::after{
+    content: "";
+    /* after는 반드시 content속성이 있어야 함 */
+    position: absolute;
+    left: 0;top: 70px;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+}
+header:hover{
+    color: black;
+    height: 350px;
+    background: #fff;
+}
+/* header */
+.innerheader{
+    width: 1440px;
+    /* border: 1px solid lime; */
+    margin: 0 auto;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    /* 세로 중앙 정렬을 하기 위해선 정확한 높이 수치가 필요하다. */
+    align-items: center;
+}
+/* .innerheader>*{border: 1px solid aqua;} */
+.logoArea{width: 160px;}
+.logoArea img{width: 100%; display: none;}
+.logoArea a{
+    display: block;
+    width: 160px;
+    height: 26px;
+    background: url(../pearlabyss/img/cm_bi_white.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+header:hover .logoArea a{
+    background: url(../pearlabyss/img/cm_bi_black.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+.gnb{width: 800px;}
+.gnb>ul{
+    display: flex;
+    height: 70px;
+}
+.gnb>ul>li{
+    /* border: 1px solid lime; */
+    flex: 1;
+    text-align: center;
+    position: relative;
+    /* 띠우기 위해 기준영역에 position: relative*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gnb>ul>li>a{
+    font-weight: bold;font-size: 1.1rem;
+}
+.gnb>ul>li>ul{
+    /* border: 1px solid salmon; */
+    position: absolute;
+    left: 0;top: 70px;
+    width: 100%;
+    padding-top: 20px;
+    color: #777;
+}
+.gnb>ul>li>ul>li{
+    /* border: 1px solid salmon; */
+    margin-bottom: 10px;
+}
+.gnb>ul>li>ul>li:hover{
+    color: #000;
+}
+.gnb>ul>li>ul>li:last-of-type{margin-bottom: 0;}
+
+.language{width: 160px;}
+.language>ul{
+    display: flex;
+    justify-content: space-between;
+}
+.language>ul>li{
+    /* border: 1px solid lime; */
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+.language>ul>li::after{
+    content: "";
+    position: absolute;
+    right: 0;top: calc(50% - 5px);
+    width: 1px; height: 10px;
+    background: #fff;
+    /* absolute 상태는 inline-block 또는 block 상태로 변하므로 높이나 너비값을 설정할 수 있다. */
+}
+.language>ul>li:last-of-type::after{display: none;}
+
+/* main */
+main{border-top: 1px solid blue; position: relative;}
+.videoBanner{
+    height: 780px;
+    /* border: 1px solid red; */
+    position: relative;
+}
+.videoBanner::after{
+    content: "";
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0,0.2);
+    /* opacity: 0.2; */
+}
+.videoBanner video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.videoBanner .flotingTxt{
+    /* border: 1px solid lime; */
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%, -50%);
+    /* transform이 부분 레이아웃에 사용되는 경우다. */
+    z-index: 20;
+    text-align: center;
+    /* 글자처럼 취급되는 것이 inline이므로 중앙정렬시 text-align을 사용가능하다. */
+}
+.flotingTxt>h2{
+    margin-bottom: 60px;
+}
+.flotingTxt>a{
+    /* border: 1px solid red; */
+    padding: 30px 110px;
+    background: rgba(255, 255, 255, 0.35);
+    display: inline-block;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    /* inline은 상하 패딩이 적용이 잘 안된다. a태그는 inline 성질을 갖고 있기때문에 display 성질을 바꿔야한다. */
+}
+
+/* news */
+.news{
+    /* border: 1px solid red; */
+    width: 1440px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+.news>h3{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 26px;
+}
+.news>ul{display: flex;}
+.news>ul>li{
+    border-right: 1px solid #ebebeb;
+    flex: 1;
+    padding: 0 30px;
+}
+.news>ul>li:first-of-type{
+    padding-left: 0;
+}
+.news>ul>li:last-of-type{
+    padding-right: 0;
+    border-right: none;
+}
+.news>ul>li h4{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.news>ul>li .date{
+    font-size: 11px;
+    color: #9a9a9a;
+    margin-bottom: 28px;
+}
+
+/* culture */
+.culture{
+    /* border: 1px solid red; */
+    width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 160px;
+}
+.culture>ul{
+    /* border: 1px solid blue; */
+    height: 574px;
+    display: flex;
+}
+.culture>ul>li{
+    /* border: 1px solid lime; */
+    flex: 1;
+    /* width:20%; */
+    position: relative;
+    overflow: hidden;
+}
+.culture>ul>li>a{
+    display: block; 
+    /* list만큼의 너비 */
+    height: 100%;    
+}
+.culture>ul>li>a>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: all 0.5s ease 0s;
+}
+.culture>ul>li:hover>a>img{
+    filter: grayscale(0);
+    transform: scale(1.3);
+}
+.on{
+    /* border: 1px solid aqua; */
+    position: absolute;
+    left: 50%; bottom: 60px;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+}
+.on>h4{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    transform: translateY(25px);
+    transition: all 0.5s ease 0s;
+}
+.culture>ul>li:hover .on h4{
+    transform: translateY(0);
+}
+.on>p{
+    /* border: 1px solid lime; */
+    padding-top: 30px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+}
+.culture>ul>li:hover .on p{
+    opacity: 1;
+}
+.on>p:after{
+    content: "";
+    position: absolute;
+    left: 50%; top: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 1px;
+    background: #fff;
+}
+
+.notice{
+    width: 1440px;
+    margin: 0 auto;
+}
+.notice>ul{
+    display: flex;
+    justify-content: space-between;    
+}
+.notice>ul>li{
+    width: calc((100% - 60px)/4);
+}
+.notice li figure{
+    /* 효과로 인해 그림 튀어나온거 안보일려고 figure 생성 */
+    height: 190px;
+    overflow: hidden;
+}
+.notice li figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.7s ease 0s;
+}
+.notice li:hover figure img{
+    transform: scale(1.15);
+}
+.notice li p{
+    font-size: 12px;
+    color: #666;
+    margin: 20px 0;
+}
+.notice li h4{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+
+footer{    
+    margin-top: 200px;
+}
+.f_top{
+    border-top: 1px solid #ebebeb;
+    padding-top: 70px;
+    margin-bottom: 50px;
+}
+.f_top>ul{
+    /* border: 1px solid green; */
+    width: 1120px;
+    margin: 0 auto;
+    display: flex;
+}
+.f_top>ul>li{
+    /* border: 1px solid red; */
+    width: calc(100%/6);
+}
+.f_top>ul>li>a>b{
+    font-size: 1.12rem;
+    font-weight: bold;
+}
+.f_top>ul>li>ul{
+    /* border: 1px solid blue; */
+    margin-top: 18px;
+    color: #9a9a9a;
+    font-size: 1rem;
+}
+.f_top>ul>li>ul>li{
+    margin-bottom: 14px;
+}
+.f_top>ul>li>ul>li:hover{
+    color: #000;
+}
+.f_top>ul>li>ul>li:last-of-type{
+    margin-bottom: 0;
+}
+.f_middle{
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 75px;
+}
+.f_middle>ul{
+    width: 1120px;
+    margin: 0 auto;
+    display: flex;
+}
+.f_middle>ul>li{
+    width: calc(100%/6);
+    font-size: 1.12rem;
+    font-weight: bold
+}
+.f_middle>ul>li.blue{
+    color: #3774da;
+}
+
+.f_under{
+    /* border: 1px solid red; */
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+.f_under::before{
+    content: "";
+    width: 138px;   
+    /* border: 1px solid red;  */
+}
+.footLogo{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.copy{
+    color: #9a9a9a;
+    margin-left: 36px;
+}
+.snsMenu{
+    width: 138px;
+    /* border: 1px solid green; */
+}
+.snsMenu>ul{
+    display: flex;
+    justify-content: space-between;
+}
+.snsMenu>ul>li{
+    /* border: 1px solid red; */
+    width: 38px;
+}
+.snsMenu>ul>li img{
+    width: 100%;
+}
+.footLogo img{width: 120px;}
+.mo{display: none;}
+}
