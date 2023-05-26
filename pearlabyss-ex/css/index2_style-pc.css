@@ -168,25 +168,30 @@ main{border-top: 1px solid blue; position: relative;}
     font-weight: bold;
     margin-bottom: 26px;
 }
-.news>ul{display: flex;}
-.news>ul>li{
+.news ul{display: flex;}
+.news ul>li{
     border-right: 1px solid #ebebeb;
-    flex: 1;
-    padding: 0 30px;
+    /* flex: 1; */
+    padding: 0 30px; 
+    box-sizing: border-box;
 }
-.news>ul>li:first-of-type{
+.news ul>li:first-of-type{
     padding-left: 0;
 }
-.news>ul>li:last-of-type{
+.news ul>li:last-of-type{
     padding-right: 0;
     border-right: none;
 }
-.news>ul>li h4{
+.news ul>li h4{
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 16px;
 }
-.news>ul>li .date{
+.news .swiper-pagination{
+    position: relative;
+    border: 1px solid red;
+}
+.date{
     font-size: 11px;
     color: #9a9a9a;
     margin-bottom: 28px;
@@ -397,4 +402,5 @@ footer{
 }
 .footLogo img{width: 120px;}
 .mo{display: none;}
+.moMenu{display: none;}
 }

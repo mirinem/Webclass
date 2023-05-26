@@ -4,7 +4,7 @@
 .container{}
 .pc{display: none;}
 header.mo{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: fixed;
     left: 0; top: 0;
     width: 100%;
@@ -15,18 +15,29 @@ header.mo{
     width: 88%;
     height: 100%;
     margin: 0 auto;
-    border: 1px solid lime;
+    /* border: 1px solid lime; */
     display: flex;
     justify-content: space-between;
     align-items: center;    
 }
 .btnMoMenu{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 6.4vw;
     height: 6.4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+.btnMoMenu>span{
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: 3px 0;
 }
 .btnMenuLag{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 6.4vw;
     height: 6.4vw;
 }
@@ -44,11 +55,104 @@ header.mo{
     width: 100%;
 }
 
+/* mobile menu */
+.moMenu{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0; top: 0;
+    z-index: 1100;
+    pointer-events: none;
+}
+.blackCover{
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    position: absolute;
+    left: 0; top: 0;
+    transition: all 0.5s ease 0s;
+    pointer-events: none;
+}
+.moMenu.show .blackCover{
+    opacity: 0.8;
+    pointer-events: auto;
+}
+.moGnb{
+    background: #fff;
+    position: absolute;
+    left: 0;top: 0;
+    width: 75%;
+    max-width: 310px;
+    min-width: 290px;
+    height: 100%;
+    /* overflow: auto; */
+    transform: translateX(-100%);
+    transition: all 0.5s ease 0.1s;
+}
+.moMenu.show .moGnb{
+    transform: translateX(0%);
+}
+.logoMo{
+    width: 31.47vw;
+    max-width: 230px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 22px; 
+    /* 세로단위는 스크롤을 하기때문에 상대단위를 사용하지 않아도 괜찮다 */
+    margin-bottom: 42px;
+}
+.logoMo img{
+    width: 100%;
+}
+.mobileMenuList{
+    width: 88%;
+    margin: 0 auto;
+    height: calc(100% - 130px);
+    overflow: auto;
+}
+.mobileMenuList>li{
+    /* padding: 12px; */
+    font-size:  1.12rem;
+    font-weight: bold;
+    position: relative;
+}
+.mobileMenuList>li>a{
+    border: 1px solid #ccc;
+    display: block;
+    padding: 12px;
+}
+.mobileMenuList>li::after{
+    content: "";    
+    position: absolute;
+    right: 15px;top: 12px;
+    transform: rotate(-45deg);
+    width: 14px;
+    height: 14px;
+    border: 1px solid black;
+    border-top: none;
+    border-right: none;
+}
+.mobileMenuList ul{
+    /* display: none; */
+    margin-top: 14px;
+    padding-left: 10px;
+}
+.mobileMenuList ul>li{
+    color: #9a9a9a;
+    font-weight: normal;
+    /* border: 1px solid salmon; */
+    margin-bottom: 8px;
+}
+.mobileMenuList ul>li:last-of-type{
+    margin-bottom: 0;
+}
+
+
 /* main */
-main{border-top: 1px solid blue; position: relative;}
+main{ position: relative;}
 .videoBanner{
-    height: 780px;
-    /* border: 1px solid red; */
+    height: 64vh;
     position: relative;
 }
 .videoBanner::after{
@@ -58,7 +162,6 @@ main{border-top: 1px solid blue; position: relative;}
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0,0.2);
-    /* opacity: 0.2; */
 }
 .videoBanner video{
     width: 100%;
@@ -66,33 +169,34 @@ main{border-top: 1px solid blue; position: relative;}
     object-fit: cover;
 }
 .videoBanner .flotingTxt{
-    /* border: 1px solid lime; */
     position: absolute;
     left: 50%;top: 50%;
     transform: translate(-50%, -50%);
-    /* transform이 부분 레이아웃에 사용되는 경우다. */
     z-index: 20;
     text-align: center;
-    /* 글자처럼 취급되는 것이 inline이므로 중앙정렬시 text-align을 사용가능하다. */
+    width: 74vw;
 }
 .flotingTxt>h2{
     margin-bottom: 60px;
+    width: 100%;
+}
+.flotingTxt>h2 img{
+    width: 100%;
 }
 .flotingTxt>a{
     /* border: 1px solid red; */
-    padding: 30px 110px;
+    padding: 3vw 13vw;
     background: rgba(255, 255, 255, 0.35);
     display: inline-block;
     color: #fff;
     font-size: 1.2rem;
     border-radius: 4px;
-    /* inline은 상하 패딩이 적용이 잘 안된다. a태그는 inline 성질을 갖고 있기때문에 display 성질을 바꿔야한다. */
 }
 
 /* news */
 .news{
     /* border: 1px solid red; */
-    width: 1440px;
+    width: 88%;
     margin: 0 auto;
     margin-top: 60px;
     margin-bottom: 100px;
@@ -102,25 +206,24 @@ main{border-top: 1px solid blue; position: relative;}
     font-weight: bold;
     margin-bottom: 26px;
 }
-.news>ul{display: flex;}
-.news>ul>li{
-    border-right: 1px solid #ebebeb;
-    flex: 1;
-    padding: 0 30px;
+.news ul{
+    display: flex;
 }
-.news>ul>li:first-of-type{
-    padding-left: 0;
+.news ul>li{
+    /* border-right: 1px solid #ebebeb; */
+    /* flex: 1; */
 }
-.news>ul>li:last-of-type{
-    padding-right: 0;
-    border-right: none;
-}
-.news>ul>li h4{
+
+.news ul>li h4{
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 16px;
 }
-.news>ul>li .date{
+.news .swiper-pagination{
+    position: relative;
+    margin-top: 50px;
+}
+.date{
     font-size: 11px;
     color: #9a9a9a;
     margin-bottom: 28px;
