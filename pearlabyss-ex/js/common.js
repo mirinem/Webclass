@@ -15,6 +15,19 @@ window.onload = function(){
         }
     });
 
-
+    let noticeSLider = new Swiper(".notice_station",{
+        slidesPerView: 2,
+        pagination: {
+            el: '.noBtn.swiper-pagination',
+          },
+        breakpoints:{
+        280:{
+            slidesPerView:1
+        },
+        768:{
+            slidesPerView:4
+        }        
+        }
+    });
 
 }

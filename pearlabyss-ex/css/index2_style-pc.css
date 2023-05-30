@@ -189,7 +189,6 @@ main{border-top: 1px solid blue; position: relative;}
 }
 .news .swiper-pagination{
     position: relative;
-    border: 1px solid red;
 }
 .date{
     font-size: 11px;
@@ -271,28 +270,37 @@ main{border-top: 1px solid blue; position: relative;}
 }
 
 .notice{
+    border: 1px solid red;
     width: 1440px;
     margin: 0 auto;
 }
-.notice>ul{
+.notice ul{
     display: flex;
-    justify-content: space-between;    
+    /* justify-content: space-between; */
 }
-.notice>ul>li{
+.notice ul>li{
     width: calc((100% - 60px)/4);
+    padding: 0 10px;
+    box-sizing: border-box;
 }
-.notice li figure{
+.notice ul>li:first-of-type{
+    padding-left: 0;
+}
+.notice ul>li:last-of-type{
+    padding-right: 0;
+}
+.notice ul>li figure{
     /* 효과로 인해 그림 튀어나온거 안보일려고 figure 생성 */
     height: 190px;
     overflow: hidden;
 }
-.notice li figure img{
+.notice ul>li figure img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.7s ease 0s;
 }
-.notice li:hover figure img{
+.notice ul>li:hover figure img{
     transform: scale(1.15);
 }
 .notice li p{
@@ -304,7 +312,9 @@ main{border-top: 1px solid blue; position: relative;}
     font-size: 15px;
     font-weight: bold;
 }
-
+.notice .noBtn.swiper-pagination{
+    position: relative;
+}
 
 
 
