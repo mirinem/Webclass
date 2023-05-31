@@ -15,7 +15,7 @@ $(document).ready(function(){
     $(".textframe>p:nth-of-type(1)").text("<i>text()함수</i>는 선택한 태그의 안에 들어가는 내용을 새로운 내용으로 교체할 수 있다.")
     // $(".textframe>p").html("<i>text()함수</i>는 선택한 태그의 안에 들어가는 내용을 새로운 내용으로 교체할 수 있다.")
     let textP = $(".textframe>p:nth-of-type(2)").text()
-    alert(textP)
+    console.log(textP)
 
     $("#a").addClass("on")
     // document.querySelector("#a").classList.add("on")
@@ -32,6 +32,8 @@ $(document).ready(function(){
     //     listArray[i].style.color = "red"
     // }
 
+    let num = Number(prompt("몇 번째 리스트를 활성화하겠습니까?"))
+    
     $(".listNum>li").eq(0).css("color", "red")
 
 })

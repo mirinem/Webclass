@@ -5,8 +5,8 @@ window.onload = function(){
     let tabDescription = [
         `<h3>title1</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus enim culpa et nostrum voluptate assumenda voluptates maiores eveniet reiciendis corrupti sequi iste quis incidunt laborum, dicta ut eos esse sapiente?</p>`,
-        `<h3>title1</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus enim culpa et nostrum voluptate assumenda voluptates maiores eveniet reiciendis corrupti sequi iste quis incidunt laborum, dicta ut eos esse sapiente?</p>`,
+        `<h3>title2</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem tempore cumque minus blanditiis quia debitis obcaecati sequi, vero nobis soluta consequuntur earum facere omnis! Hic unde similique aspernatur ullam inventore.</p>`,
         `<h3>title3</h3>
         <ul>
             <li>des1</li>

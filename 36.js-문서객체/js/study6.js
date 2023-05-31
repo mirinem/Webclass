@@ -1,6 +1,7 @@
 window.onload = function(){
-    let menuState = false
     // 문서를 끝까지 읽은 뒤 실행할 소스코드
+    let menuState = false
+    // 상태를 나타내는 변수
     let btnClose = document.querySelector(".btnMenu")
     let navTag = document.querySelector("nav")
     btnClose.addEventListener("click",function(){
