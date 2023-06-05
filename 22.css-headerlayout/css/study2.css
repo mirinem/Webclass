@@ -70,6 +70,7 @@ header>h1{height: 50px;}
     align-items: center;
     padding-left: 60px;
 }
+
 .container{
     width: calc(100% - 200px);
     margin-left: 200px;

@@ -285,13 +285,6 @@ main{ position: relative;}
     width: 90%;
     margin: 0 auto;
 }
-.notice ul{
-    display: flex;
-    /* justify-content: space-between;   */
-}
-.notice ul>li{
-    /* width: calc((100% - 60px)/4); */
-}
 .notice li figure{
     height: 260px;
     overflow: hidden;
@@ -310,11 +303,13 @@ main{ position: relative;}
     font-size: 15px;
     font-weight: bold;
 }
-.notice .noBtn.swiper-pagination{
+.notice .notice_pagination{
     position: relative;
     margin-top: 50px;
 }
-
+span.swiper-pagination-bullet-active{
+    background: black;
+}
 
 
 footer{    

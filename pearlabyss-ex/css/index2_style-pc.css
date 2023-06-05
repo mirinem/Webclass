@@ -270,17 +270,17 @@ main{border-top: 1px solid blue; position: relative;}
 }
 
 .notice{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 1440px;
     margin: 0 auto;
 }
 .notice ul{
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 .notice ul>li{
     width: calc((100% - 60px)/4);
-    padding: 0 10px;
+    /* padding: 0 10px; */
     box-sizing: border-box;
 }
 .notice ul>li:first-of-type{

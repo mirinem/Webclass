@@ -1,9 +1,9 @@
 window.onload = function(){
 
     let newsSLider = new Swiper(".news_station",{
-        slidesPerView: 2,
         pagination: {
-            el: '.swiper-pagination',
+            el: '.news_pagination',
+            clickable: true
           },
         breakpoints:{
         280:{
@@ -15,18 +15,20 @@ window.onload = function(){
         }
     });
 
-    let noticeSLider = new Swiper(".notice_station",{
-        slidesPerView: 2,
-        pagination: {
-            el: '.noBtn.swiper-pagination',
-          },
+    let noticeSLider = new Swiper(".notice_station",{    
+        
         breakpoints:{
         280:{
             slidesPerView:1
         },
         768:{
-            slidesPerView:4
+            slidesPerView:4,
+            spaceBetween: 20
         }        
+        },
+        pagination: {
+            el: '.notice_pagination',
+            clickable: true
         }
     });
 
