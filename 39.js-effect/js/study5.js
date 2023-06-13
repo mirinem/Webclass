@@ -7,7 +7,7 @@ $(document).ready(function(){
     let stationWidth;
     let trainWidth;
     
-    // 최초의 문서가 완성 됐을 떄, 한번 실행되도록
+    // 최초의 문서가 완성 됐을 때, 한번 실행되도록
     let winWidth = $(window).width()
 
         if(winWidth>=1024){
@@ -80,6 +80,27 @@ $(document).ready(function(){
         e.preventDefault()
         if(count<0){count=4} // 예외처리
         moveSlider(count)
+    })
+
+
+    // 자동슬라이드기능
+    let timer = setInterval(function(){
+        count++
+        if(count>4){count=0}
+        moveSlider(count)
+    },2000)  
+
+    $(".station").mouseover(function(){
+        clearInterval(timer)
+    })
+
+    $(".station").mouseout(function(){
+        // let을 쓰게 되면 마우스 뺄때마다 새로운 timer가 생성되므로 let을 빼서 원래 timer를 가르키게한다.
+        timer = setInterval(function(){
+            count++
+            if(count>4){count=0}
+            moveSlider(count)
+        },2000)  
     })
 
     function moveSlider(idx){
