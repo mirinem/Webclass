@@ -1,0 +1,144 @@
+/* reset */
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: normal;}
+a{text-decoration: none;color: inherit;}
+i,em,address{font-style: normal;}
+strong,b{font-weight: normal;}
+img{max-width: 100%;}
+
+
+body{
+    background: rgb(211, 191, 191);
+    /* font-family: 'Jost', sans-serif; */
+    font-family: 'Raleway', sans-serif;
+}
+
+/* layout */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    padding-bottom: 0;
+}
+.snsMenu{
+    display: flex;
+}
+.snsMenu>li{
+    font-size: 22px;
+    margin-right: 18px;
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+.snsMenu>li:hover{
+    transform: scale(1.2);
+    color: rgb(126, 81, 81);
+}
+.snsMenu>li:last-of-type{
+    margin-right: 0px;
+}
+.logo{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    line-height: 0;
+}
+
+/* main */
+.stationMenu{
+    display: flex;
+    padding-left: 20px;
+    margin-bottom: 70px;
+}
+.stationMenu>li{
+    margin-right: 20px;
+    text-transform: capitalize;
+    transition: all 0.5s ease 0s;
+    color: #fff;
+}
+.stationMenu>li:hover{
+    color: rgb(126, 81, 81);
+}
+.station{
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+}
+.train{
+    width: 4600px; 
+    /* 리스트를 클릭했을 때 원래크기보다 600픽셀이 더 늘어날 것을 예상 */
+    height: 500px;
+    display: flex;
+    transition: all 0.8s ease 0s;
+}
+.train>li{
+    width: 180px;
+    height: 400px;
+    margin-right: 20px;
+    background: #fff;
+    border-radius: 5px; 
+    overflow: hidden;
+    position: relative;   
+    opacity: 0.7;
+    transition: all 0.5s ease 0s;
+}
+.train>li:hover{
+    opacity: 1;
+}
+.train>li>.title{
+    width: 100%;
+    position: absolute;
+    left: 0; bottom: 60px;
+    background: #000;
+    color: #fff;
+    padding: 14px 0;
+    text-transform: capitalize;
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 200;
+    transition: all 0.5s ease 0s;
+}
+.btnClose{
+    display: none;
+}
+.train>li>p{display: none;}
+.small{width: 100%;}
+
+/* list에 on클래스가 추가됐을 때의 스타일 */
+.train>li.on{
+    width: 780px;
+    height: 500px;
+    opacity: 1;
+}
+.train>li.on .small{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.train>li.on .title{
+    font-size: 35px;
+    padding: 20px 0;
+    padding-left: 20px;
+    bottom: 280px;
+    opacity: 0.8;
+}
+.train>li.on .btnClose{
+    display: block;
+    /* border: 1px solid lime; */
+    position: absolute;
+    right: 33px; top: 140px;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+.train>li.on>p{
+    display: block;
+    position: absolute;
+    right: 20px; bottom: 20px;
+    background: #000;
+    color: #fff;
+    padding: 14px;
+}
+
+
+.big{display: none;}
