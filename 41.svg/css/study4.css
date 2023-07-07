@@ -1,0 +1,21 @@
+*{margin: 0; padding: 0;}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.intro figure{
+    width: 1600px;
+}
+#introtxt path{
+    fill: transparent;
+    /* none은 면색이 아예 없는 것이라 색상의 중간 수치를 계산할 수 없다. 그래서 transparent(투명)을 사용해야 한다 */
+    stroke: black;
+    /* transition: width 1s ease 0s,height 1s ease 1s; */
+}
+#introtxt.on path{
+    stroke-dashoffset: 0!important;
+    fill: rgb(255, 128, 0);
+}

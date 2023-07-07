@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINIM portfolio</title>
+    <link rel="shortcut icon" href="./img/m_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/textAnimation.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="./js/textAnimation.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/bannerSlide2.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Diphylleia&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
+</head>
+<body>
+    <div class="stylePopup">
+        <div class="backSpopup">
+            <div class="popupTap">            
+                <h2>Style guide</h2>
+                <span class="closedBtn2"><img src="./SVG/popupBtn.svg" alt="팝업 닫기 버튼"></span>
+            </div>
+            <div class="popText2">
+                <h3>problem _</h3>
+                <p>
+                    1. 반응형 웹페이지가 아니다. <br>
+                    2. 이전 스타일의 웹디자인이 유지되고 있다. <br>
+                    3. 반복되는 내용이 많고 전체적으로 콘텐츠 크기가 작아 한눈에 알아보기 힘들다. 
+                </p>
+                <h3>concept _</h3>
+                <p>
+                    이전의 웹사이트는 목적에 맞게 잘 만들었지만 딱딱하고 다소 올드한 느낌이 들었다. <br> 
+                    본래의 색은 잃지 않으면서 트렌드와 그에 맞는 효과가 가미되게 컨셉을 수정하였다. <br> 
+                    샛별을 떠오르게 하는 하늘과 친환경적 의미를 담아 컬러를 군청으로 잡았고, <br> 
+                    모던함, 정직함, 신뢰감을 표현하면서 트렌디함은 잃지 않게 디자인하였다.
+                </p>
+                <h3>color _</h3>
+                <p class="styleColor">
+                    <i>point :</i>  main <b class="b1">#250188</b>  / sub(header,footer) <b class="b2">#2AF598</b> <br>
+                    <i>background :</i>  <b class="b3">#000</b> , <b class="b4">#999</b> , <b class="b5">#cecece</b> , <b class="b6">#fff</b>
+                </p>
+                <h3>tyopgraphy _</h3>
+                <p>
+                    <i>국문 :</i>  프리텐다드 <br>
+                    <i>영문 :</i>  Poppins , Cormorant Garamond
+                </p>
+            </div>
+            <span class="closedBtn">Ok</span>
+        </div>
+    </div>
+    <div class="menu">
+        <ul class="gnb">
+            <li class="on"><a href="#">INTRO</a></li>
+            <li><a href="#s1">ABOUT</a></li>
+            <li><a href="#s2">SKILL</a></li>
+            <li><a href="#s3">POPUP</a></li>
+            <li><a href="#s4">BANNER</a></li>
+            <li><a href="#s5">REDESIGN</a></li>
+            <li><a href="#s6">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class="wrap">   
+        <header>
+            <p><a href="#">contact me</a></p>
+            <h1 class="logo"><a href="#"><img src="./img/logo.png" alt="박정민 로고이미지"></a></h1>
+            <div class="menuTab">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>     
+        <main>
+            <div class="fixedFrame">
+                <div class="movingArea">
+                    <ul class="intro_train">
+                        <li class="intro on">
+                            <div class="circle"></div>
+                            <p>like an <b>ORANGE</b></p>       
+                        </li>
+                        <li class="intro2">                            
+                            <p class="p1">안녕하세요</p>
+                            <p class="p2">낮과 저녁을 모두를 밝히는</p>
+                            <p class="p3">열정적인 색, 오렌지를 닮은</p>
+                            <p class="p4">웹디자이너 박정민입니다.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="s1" class="about">
+                <div class="aboutL">
+                    <img class="prizm" src="./img/about_img.jpg" alt="about 배경 프리즘이미지">
+                    <img class="font_A mltr" src="./SVG/about_font.svg" alt="about 글자이미지">
+                    <img class="mark" src="./SVG/about_badge.svg" alt="오렌지 마크이미지">
+                    <p class="blind">
+                        어릴 적부터 미적 호기심이 많았습니다. <br>
+                        모든 형태엔 단순히 아름다움만 있는 것이 아닌 걸 깨닫고 <br>
+                        사용자의 경험에 매력을 느껴 웹디자인 길을 택했습니다. <br>
+                        디자인은 사용성과 긴밀하게 연결되있다고 생각합니다. <br>
+                        단순히 시각적인 미를 위한 디자인이 아니라 사용자의 <br>
+                        경험과 편의를 고려하는 디자이너가 되고 싶습니다. <br>
+                        저만이 가진 색으로 식지않고 꾸준하게 성장하겠습니다.
+                    </p>
+                </div>
+                <div class="aboutR">
+                    <h3><b class="hm1">Park Jung Min</b></h3>
+                    <h3><b class="hm2">Park Jung Min</b></h3>
+                    <h3><b class="hm3">Park Jung Min</b></h3>
+                    <p>
+                        Design → Yes! <br>
+                        Web Publish → Yes! <br>
+                        Funny → Yes! Yes!
+                    </p>
+                    <h3><b class="hm4">Park Jung Min</b></h3>
+                    <h3>Park Jung Min*</h3>
+                </div>
+            </div>
+            <div id="s2" class="skill downup">
+                <h2 class="mltr">Language - Programs</h2>
+                <ul>
+                    <li class="rhino">
+                        <div class="skillTop">
+                            <h4>Rhino</h4>                        
+                            <figure>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 871.54 32"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="c1" d="M0,2C72.63,2,72.63,30,145.25,30S217.88,2,290.5,2s72.63,28,145.26,28S508.39,2,581,2s72.63,28,145.26,28S798.91,2,871.54,2"/><path class="c2" d="M0,2C72.63,2,72.63,30,145.25,30S217.88,2,290.5,2s72.63,28,145.26,28S508.39,2,581,2s72.63,28,145.26,28S798.91,2,871.54,2"/></g></g></svg>
+                            </figure>
+                            <span class="depi"></span>
+                        </div>
+                        <div class="skillBottom">
+                            <p>가다 작업을 고려하여 주얼리 팬던트, 반지, 귀걸이, 부속 등 기본 디자인의 원본 제작을 할 수 있습니다.</p>
+                            <span class="per"><i>80</i><b>%</b></span>
+                        </div>
+                    </li>
+                    <li class="ps">
+                        <div class="skillTop">
+                            <h4>Adobe photoshop</h4>                        
+                            <figure>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 871.54 32">><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="c1" d="M0,2C72.63,2,72.63,30,145.25,30S217.88,2,290.5,2s72.63,28,145.26,28S508.39,2,581,2s72.63,28,145.26,28S798.91,2,871.54,2"/><path class="c2" d="M0,2C72.63,2,72.63,30,145.25,30S217.88,2,290.5,2s72.63,28,145.26,28S508.39,2,581,2s72.63,28,145.26,28S798.91,2,871.54,2"/></g></g></svg>
+                            </figure>
+                            <span class="depi"></span>
+                        </div>
+                        <div class="skillBottom">
+                            <p>누끼따기, 이미지 보정, 이미지 편집을 할 수 있습니다.</p>
+                            <span class="per"><i>85</i><b>%</b></span>
+                        </div>
+                    </li>
+                    <li class="ai">
+                        <div class="skillTop">
+                            <h4>Adobe illustrator</h4>                        
+                            <figure>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 871.54 32"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="c1" d="M0,2C72.63,2,72.63,30,145.25,30S217.88,2,290.5,2s72.63,28,145.26,28S508.39,2,581,2s72.63,28,145.26,28S798.91,2,871.54,2"/><path class="c2" d="M0,2C72.63,2,72.63,30,145.25,30S217.88,2,290.5,2s72.63,28,145.26,28S508.39,2,581,2s72.63,28,145.26,28S798.91,2,871.54,2"/></g></g></svg>
+                            </figure>
+                            <span class="depi"></span>
+                        </div>
+                        <div class="skillBottom">
+                            <p>배너, 로고, 명함, 웹디자인 레이아웃 작업이 가능합니다.</p>
+                            <span class="per"><i>95</i><b>%</b></span>
+                        </div>
+                    </li>
+                    <li class="html">
+                        <div class="skillTop">
+                            <h4>Html5</h4>                        
+                            <figure>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 871.54 32"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="c1" d="M0,2C72.63,2,72.63,30,145.25,30S217.88,2,290.5,2s72.63,28,145.26,28S508.39,2,581,2s72.63,28,145.26,28S798.91,2,871.54,2"/><path class="c2" d="M0,2C72.63,2,72.63,30,145.25,30S217.88,2,290.5,2s72.63,28,145.26,28S508.39,2,581,2s72.63,28,145.26,28S798.91,2,871.54,2"/></g></g></svg>
+                            </figure>
+                            <span class="depi"></span>
+                        </div>
+                        <div class="skillBottom">
+                            <p>사용자에게 맥락에 맞는 정보를 전달하기위한 코딩과 마크업 작업이 가능합니다.</p>
+                            <span class="per"><i>90</i><b>%</b></span>
+                        </div>
+                    </li>
+                    <li class="css">
+                        <div class="skillTop">
+                            <h4>Css3</h4>                        
+                            <figure>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 871.54 32"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="c1" d="M0,2C72.63,2,72.63,30,145.25,30S217.88,2,290.5,2s72.63,28,145.26,28S508.39,2,581,2s72.63,28,145.26,28S798.91,2,871.54,2"/><path class="c2" d="M0,2C72.63,2,72.63,30,145.25,30S217.88,2,290.5,2s72.63,28,145.26,28S508.39,2,581,2s72.63,28,145.26,28S798.91,2,871.54,2"/></g></g></svg>
+                            </figure>
+                            <span class="depi"></span>
+                        </div>
+                        <div class="skillBottom">
+                            <p>여러 브라우저에 동일하게 랜더링 될 수 있도록 웹접근성과 웹표준성을 고려하여 작성할 수 있습니다.</p>
+                            <span class="per"><i>70</i><b>%</b></span>
+                        </div>
+                    </li>
+                    <li class="jquery">
+                        <div class="skillTop">
+                            <h4>Jquery</h4>                        
+                            <figure>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 871.54 32">><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="c1" d="M0,2C72.63,2,72.63,30,145.25,30S217.88,2,290.5,2s72.63,28,145.26,28S508.39,2,581,2s72.63,28,145.26,28S798.91,2,871.54,2"/><path class="c2" d="M0,2C72.63,2,72.63,30,145.25,30S217.88,2,290.5,2s72.63,28,145.26,28S508.39,2,581,2s72.63,28,145.26,28S798.91,2,871.54,2"/></svg>
+                            </figure>
+                            <span class="depi"></span>
+                        </div>
+                        <div class="skillBottom">
+                            <p>슬라이드와 탭메뉴, 팝업 등 기본적인 기능을 라이브러리 언어로 작성 할 수 있습니다.</p>
+                            <span class="per"><i>60</i><b>%</b></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="projects">
+                <h2 class="mrtl">Projects</h2>
+                <figure class="pp mltr">
+                    <a href="#">
+                        <img src="./img/popup/BlackFriday1.png" alt="팝업 이미지">
+                        <p>Various website Popup</p>
+                        <span>Design Popup</span>
+                    </a>
+                </figure>
+                <figure class="ba mrtl">
+                    <a href="#">
+                        <img src="./img/banner_apple.png" alt="배너 이미지">
+                        <p>Various website Banner</p>
+                        <span>Design Banner</span>
+                    </a>
+                </figure>
+                <figure class="re downup">
+                    <a href="#">
+                        <p>Corporate website HYOSUNG</p>
+                        <span>Redesign Website</span>
+                        <img src="./img/redesign_cut.png" alt="리디자인 이미지">
+                    </a>
+                </figure>
+            </div>
+            <div id="s3" class="fixedEffect">
+                <div class="movingStation">
+                    <div class="popup">
+                        <div class="popupTop">
+                            <h2>Pop-up</h2>
+                            <p class="at">you can see 8 different pop-up designs in this portfolio</p>
+                            <p class="bt">you can see 8 different pop-up designs in this portfolio</p>
+                        </div>
+                        <ul class="train">
+                            <li>
+                                <figure>
+                                    <h4>Black Friday</h4>
+                                    <img src="./img/popup/BlackFriday2.png" alt="블랙프라이데이 팝업이미지">
+                                    <ul class="color1">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </figure>
+                                <div class="popTxt">
+                                    <h3><b>1.</b> 특별한 블랙프라이데이</h3>
+                                    <p>%문장부호에 아이디어를 얻어 블랙 프라이데이를 표현하였다.</p>
+                                    <p>서체_ #Javanese Text #Noto serif sans</p>   
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <h4>Christmas</h4>
+                                    <img src="./img/popup/popup_chirstmas.png" alt="크리스마스 팝업이미지">
+                                    <ul class="color2">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </figure>
+                                <div class="popTxt">
+                                    <h3><b>2.</b> 금빛 크리스마스</h3>
+                                    <p>크리스마스를 대표하는 트리에 기쁨과 즐거움을 반짝임으로 
+                                        표현했다.</p>
+                                    <p>서체_ #Baskervville #Cormorant Garamond</p>    
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <h4>Halloween</h4>
+                                    <img src="./img/popup/Halloween2.png" alt="할로윈 팝업이미지">
+                                    <ul class="color3">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </figure>
+                                <div class="popTxt">
+                                    <h3><b>3.</b> 할로윈 러브</h3>
+                                    <p>할로윈을 키치하고 러블리한 느낌으로 
+                                        색다르게 표현하고 싶었다.</p>
+                                    <p>서체_ #Josefin Sans #창원단감아삭 Bold</p> 
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <h4>New Year</h4>
+                                    <img src="./img/popup/newyear.png" alt="근하신년 팝업이미지">
+                                    <ul class="color4">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </figure>
+                                <div class="popTxt">
+                                    <h3><b>4.</b> 빛나는 근하신년</h3>
+                                    <p>새해를 맞는 설레는 밤을 
+                                        모티브로 더 나은 미래를 
+                                        염원하는 마음을 표현했다.</p>
+                                    <p>서체_ #Noto serif sans</p>   
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <h4>National Family Month</h4>
+                                    <img src="./img/popup/family.png" alt="가정의달 팝업이미지">
+                                    <ul class="color5">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </figure>
+                                <div class="popTxt">
+                                    <h3><b>5.</b> 가정의 달</h3>
+                                    <p>5월의 꽃들로 마치 꽃다발을
+                                        연상케하여 감사의 마음을 표현하였다.</p>
+                                    <p>서체_ #조선로고체 #Noto serif sans</p> 
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <h4>Hot Summer</h4>
+                                    <img src="./img/popup/summer.png" alt="핫 여름 팝업이미지">
+                                    <ul class="color6">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </figure>
+                                <div class="popTxt">
+                                    <h3><b>6.</b> Y2K 핫 썸머</h3>
+                                    <p>뜨거운 여름을 세기말 감성 스타일로 표현하였다.</p>
+                                    <p>서체_ #둥근모체  #프리텐다드</p>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <h4>Children's day</h4>
+                                    <img src="./img/popup/children.png" alt="어린이날 팝업이미지">
+                                    <ul class="color7">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </figure>
+                                <div class="popTxt">
+                                    <h3><b>7.</b> 즐거운 어린이날</h3>
+                                    <p>어릴적 쓴 그림일기를 모티브로 어린이날을 표현하였다.</p>
+                                    <p>서체_ #둥근모체 #TVN즐거운이야기</p>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <h4>Pepero day</h4>
+                                    <img src="./img/popup/pepero.png" alt="빼빼로데이 팝업이미지">
+                                    <ul class="color8">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </figure>
+                                <div class="popTxt">
+                                    <h3><b>8.</b> 사랑의 빼빼로데이</h3>
+                                    <p>‘ㅐ’선을 연장하여 빼빼로를 
+                                        연상되도록 표현하려했다.</p>
+                                    <p>서체_ #Poppins</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="s4" class="bannerImg">
+                <h2 class="mltr">Banner</h2>
+                <img src="./img/banner_mainImg.jpg" alt="배너 대표이미지">
+            </div>
+            <div class="banner main-content">
+                <ul class="movingArea2">
+                    <li class="section">
+                        <div class="b_title">
+                            <section>1. 체리 블랙프라이데이</section>
+                            <section>Banner</section>
+                        </div>
+                        <div class="b_content">
+                            <img src="./img/banner/blackfri.png" alt="체리 블랙프라이데이 배너이미지">
+                            <div class="btext">
+                                <h4>Black Friday <br>
+                                    _ 체리 블랙프라이데이</h4>
+                                <p>폭탄세일을 체리와 
+                                    연결하여 플랙프라이데이 배너를 
+                                    디자인했다.</p>
+                                <span>FONT_ Poppins</span>
+                                <ul class="b_color bc1">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section">
+                        <div class="b_title">
+                            <section>2. 샤넬 - 라 크렘 망</section>
+                            <section>Banner</section>
+                        </div>
+                        <div class="b_content">
+                            <img src="./img/banner/chanel.png" alt="샤넬 라 크렘 망 배너이미지">
+                            <div class="btext">
+                                <h4>샤넬 <br>
+                                    _ 라 크렘 망</h4>
+                                <p>샤넬 핸드크림 라인인
+                                    ‘라 크렘 망’의 배너를 디자인
+                                    해보았다. 색과 절제된 형식으로
+                                    샤넬 이미지를 표현하였다.</p>
+                                <span>FONT_ noto sans kr</span>
+                                <ul class="b_color bc2">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section">
+                        <div class="b_title">
+                            <section>3. 라잇츠! 카라멜! 액션!</section>
+                            <section>Banner</section>
+                        </div>
+                        <div class="b_content">
+                            <img src="./img/banner/benjerry.png" alt="밴&제리 배너이미지">
+                            <div class="btext">
+                                <h4>밴&제리 <br>
+                                    _ 라잇츠! 카라멜! 액션!</h4>
+                                <p>아이스크림 브랜드 
+                                    ‘밴앤제리스’ 미국 신메뉴 배너를
+                                    아이스크림 flavor를 고려하여
+                                    디자인했다. </p>
+                                <span>FONT_ SB 어그로체, 프리텐다드</span>
+                                <ul class="b_color bc3">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section">
+                        <div class="b_title">
+                            <section>4. 아이폰 - 나랑 노랑</section>
+                            <section>Banner</section>
+                        </div>
+                        <div class="b_content">
+                            <img src="./img/banner/iphone.png" alt="아이폰 컬러마케팅 배너이미지">
+                            <div class="btext">
+                                <h4>아이폰  <br>
+                                    _ 나랑 노랑</h4>
+                                <p>컬러마케팅의 일환인
+                                    아이폰14 새로운 색상- 노랑을
+                                    이용하여  봄느낌이 나도록
+                                    배너를 디자인해보았다.</p>
+                                <span>FONT_ Poppins, noto sans kr</span>
+                                <ul class="b_color bc4">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section">
+                        <div class="b_title">
+                            <section>5. 추석맞이 선물대전</section>
+                            <section>Banner</section>
+                        </div>
+                        <div class="b_content">
+                            <img src="./img/banner/thanks.png" alt="추석맞이 배너이미지">
+                            <div class="btext">
+                                <h4>Korean Thanksgiving Day <br>
+                                    _ 추석맞이 선물대전</h4>
+                                <p>밤하늘 추석을 연상케하고 
+                                    가을을 대표하는 달토끼, 감 등을 
+                                    이용하여 디자인 해보았다.</p>
+                                <span>FONT_ 프리텐다드, 읏맨 궁서체</span>
+                                <ul class="b_color  bc5">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section">
+                        <div class="b_title">
+                            <section>6. 에어비엔비 - 여름방학특가</section>
+                            <section>Banner</section>
+                        </div>
+                        <div class="b_content">
+                            <img src="./img/banner/airbnb.png" alt="에어비엔비 배너이미지">
+                            <div class="btext">
+                                <h4>에어비엔비 <br>
+                                    _ 여름방학특가</h4>
+                                <p>여름방학을 주제로 잡고 에어비엔비의 
+                                    메인컬러와 찜 태그 = 인스타그램 
+                                    ‘좋아요’ 를 이중적 느낌을 유도하며 
+                                    표현해보았다.</p>
+                                <span>FONT_ Poppins, noto sans kr</span>
+                                <ul class="b_color bc6">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section">
+                        <div class="b_title">
+                            <section>7. 보라보라 블랙프라이데이</section>
+                            <section>Banner</section>
+                        </div>
+                        <div class="b_content">
+                            <img src="./img/banner/blackfri2Bora.png" alt="보라보라 블랙프라이데이 배너이미지">
+                            <div class="btext">
+                                <h4>Black Friday  <br>
+                                    _ 보라보라 블랙프라이데이</h4>
+                                <p>보라색과 비눗방울을 이용하여 
+                                    세일이 방울방울 열리는 느낌으로 
+                                    디자인해보았습니다.</p>
+                                <span>FONT_ Poppins</span>
+                                <ul class="b_color bc7">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="section">
+                        <div class="b_title">
+                            <section>8. 비건 펫 데이</section>
+                            <section>Banner</section>
+                        </div>
+                        <div class="b_content">
+                            <img src="./img/banner/pet.png" alt="비건 펫 데이 배너이미지">
+                            <div class="btext">
+                                <h4>애견용품 <br>
+                                    _ 비건 펫 데이</h4>
+                                <p>비건,천연의 느낌을 주는 식물 색상을
+                                    선택하여 디자인해보았습니다.</p>
+                                <span>FONT_ 여기어때 잘난체, cookierun</span>
+                                <ul class="b_color bc8">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="s5" class="redesign">
+                <h2 class="mltr">Responsive Re-design</h2>
+                <div class="contents">
+                    <div class="re_left mltr">
+                        <h3>
+                            (주)효성 <br>
+                            웹사이트 리디자인
+                        </h3>
+                        <p>[ Hyosung website and detail page design ]</p>
+                    </div>
+                    <div class="re_right mrtl">
+                        <p>
+                            효성은 국내 대표 화학섬유 특화재벌로 '섬유, 산업자재, 화학, 중공업, 건설, 무역, 정보 통신, 금융' 등의 사업을 영위하는 기업입니다. <br>
+                            기업 홈페이지의 특성에 맞는 그리드 형태의 레이아웃을 설정하고, 카테고리와 내용을 정리하여 이용의 편리성을 높였습니다. <br>
+                            기업 아이덴티티 컬러인 보라색을 지속적으로 사용하여 기업의 아이덴티티를 명확하게 나타내는 것을 목표로 디자인하였습니다.
+                        </p>
+                        <ul class="re_button">
+                            <li><a href="http://www.hyosung.co.kr/kr/index.do">Before site</a></li>
+                            <li class="styleBtn">Style guide</li>
+                            <li><a href="https://mirinem.github.io/redesignSite/">Go responsive new website</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <img class="blind" src="./img/redesign_sample.png" alt="리디자인 합성이미지">
+                <div class="re-text downup">
+                    <p>작업 기여도: 100%</p>
+                    <p>사용 프로그램 : Adobe Photoshop - Illustrator, Visual Studio Code</p>
+                </div>
+            </div> 
+            <div class="mainpage">
+                <h3 class="downup">Main page</h3>
+                <figure class="downup">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 597 0.75"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><line class="lineM" y1="0.38" x2="597" y2="0.38"/><line class="lineM2" y1="0.38" x2="597" y2="0.38"/></g></g></svg>
+                </figure>
+                <p class="downup">
+                    메인페이지는 기업 전반을 볼 수 있도록 기존 홈페이지를 
+                    참고하여 내용을 ‘기업 이념, 지속 가능, 사업 분야, 
+                    미디어 센터’ 등 네 가지로 분류하여 작업했습니다. 
+                    일관성있는 그리드 형태 안에서 디자인하였으며, 
+                    각 내용마다 이미지와 핵심내용을 배치해 주요 컨텐츠에 
+                    대한 접근성과 직관성을 높였습니다. 또한 각 내용에 
+                    연결되는 링크를 제공하여 편의성을 높였습니다.
+                </p>
+            </div>
+            <div class="subpage">
+                <div class="sub_contents">
+                    <span class="mltr">+ Sub pages</span>
+                    <h3 class="mltr">연혁 페이지 / 사업분야 / 지속가능보고서</h3>
+                    <img src="./img/subpage_imac.png" alt="슬라이드 배경 맥노트북이미지">
+                    <div class="sub_station">
+                        <ul class="sub_train">
+                            <li>
+                                <img src="./img/sub1.png" alt="서브1페이지 일부이미지">
+                            </li>
+                            <li>
+                                <img src="./img/sub2.png" alt="서브2페이지 일부이미지">
+                            </li>
+                            <li>
+                                <img src="./img/sub3.png" alt="서브3페이지 일부이미지">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="sub_text mrtl">
+                    <li>
+                        <h4><span>01</span>회사연혁</h4>
+                        <p>기업의 연혁을 보기 편하게 <br> 리디자인했습니다.
+                        <span><a href="#">View</a></span>
+                        </p>
+                    </li>
+                    <li>
+                        <h4><span>02</span>사업분야</h4>
+                        <p>
+                            각 사업의 많은 내용을 간추리고 
+                            이미지를 <br> 첨부하여 보기 용이하게 정리했습니다.
+                            <span><a href="#">View</a></span>
+                        </p>
+                    </li>
+                    <li>
+                        <h4><span>03</span>지속가능보고서</h4>
+                        <p>
+                            보고서 다운로드 버튼의 사용성을 <br>
+                            고려하며 디자인하였습니다. 
+                            <span><a href="#">View</a></span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="sub_img">
+                <img class="blind" src="./img/subpage_all.png" alt="서브페이지 전체 목업이미지">
+            </div>
+            <div id="s6" class="end">
+                <h2 class="mltr">At the end of</h2>
+                <div class="circle2"></div>
+                <p class="blind">
+                    사용자와 개발자 사이 <br>
+                    소통하는 웹디자이너가 될 수 있도록 노력하겠습니다. <br>
+                    끝까지 봐주셔서 감사합니다! <br>
+                    I hope you enjoy my Project! 
+                </p>
+                <span class="blind">CONTACT ME</span>
+                <img class="blind" src="./img/phone.png" alt="contact 전화 이미지">
+                <figure class="blind">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111.48 355.28"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="conArc" d="M67.32.77s51.42,43.08,42,91c-11,56-89.32,59.07-104,108-18,60,23,106,71,153l-2-36"/></g></g></svg>
+                </figure>
+            </div>
+        </main>
+        <footer>
+            <div class="Fleft">
+                <p class="Fcontents">
+                    Web design, <br>
+                    Web publisher
+                </p>
+                <h1 class="fLogo"><a href="#"><img src="./img/logo_footer.png" alt="푸터 로고이미지"></a></h1>
+            </div>
+            <div class="Fmid">
+                <p class="Fcontents">
+                    Gyeonggi-do , Korea <br>
+                    pjm8584@naver.com
+                </p>
+                <p class="copy Fbotxt">&copy;2023 Park jung Min</p>
+            </div>
+            <div class="Fright">
+                <a  class="Fcontents topBtn" href="#">
+                    Back to Top
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.61 1"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><line class="btnline" y1="0.5" x2="144.61" y2="0.5"/></g></g></svg>
+                    </figure>
+                </a>
+                <p class="Fbotxt">All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
