@@ -1,4 +1,41 @@
 $(document).ready(function(){
+
+    // 스크롤 시 부드럽게
+    new Scrooth({
+        strength:18, 
+        acceleration: 1.9,
+        deceleration: 0.94
+    });
+
+    // 마우스를 움직이면 cursor클래스가 따라다니도록
+    $(document).mousemove(function(event){
+        let posX = event.clientX-15
+        let posY = event.clientY-15
+        // console.log(posX,posY)
+        $(".cursor").css("left",posX+"px")
+        $(".cursor").css("top",posY+"px")
+        $(".cursor").addClass("on")
+        
+        $(".cursorGuideBox").css("left",(posX+110)+"px")
+        $(".cursorGuideBox").css("top",(posY-10)+"px")
+    })
+
+    $(".fixedEffect").mouseover(function(){
+        $(".cursor").addClass("big")
+        let txt = $(".fixedEffect").attr("data-desc")
+        $(".cursorGuideBox").text(txt)
+    })
+    $(".banner").mouseover(function(){
+        $(".cursor").addClass("big")
+        let txt2 = $(".banner").attr("data-desc")
+        $(".cursorGuideBox").text(txt2)
+    })
+
+    $(".fixedEffect, .banner").mouseout(function(){
+        $(".cursor").removeClass("big")
+    })
+
+
     
     // 버튼 클릭시 메뉴바 열리게
     let MenuState = false;
@@ -215,7 +252,7 @@ $(document).ready(function(){
 
 
     // 배너 이미지 클릭시 이미지 변환 - 이미지 경로 바꾸기
-    let change = $(".b_content>img");
+    let change = $(".b_content img");
     
     $(change).click(function(){
         if($(this).hasClass("on")==false){
@@ -289,6 +326,7 @@ $(document).ready(function(){
     }
 
 
+    // 스타일 팝업 열리고 닫기
     $(".styleBtn").click(function(e){
         e.preventDefault()
         $(".stylePopup").addClass("on")
@@ -298,4 +336,5 @@ $(document).ready(function(){
         $(".stylePopup").removeClass("on")
     })
 
+    
 })

@@ -57,6 +57,81 @@ html{
 }
 
 
+/* 마우스 영역 */
+.cursor{
+    width:26px;
+    height:26px;
+    position:fixed;
+    left:0;
+    top:0;
+    opacity: 0;
+    border-radius: 50%;
+    background:black;
+    transition:
+    opacity 1s ease 0s,
+    width 0.6s ease 0s,
+    height 0.6s ease 0s;
+    pointer-events: none;
+    z-index: 300;
+}
+.cursor.on{
+    opacity: 1;
+}
+.cursor.on.big{
+    width:100px;
+    height:100px;
+    background:transparent;
+    border:1px solid black;
+}
+.wheelAni{
+    display:none;
+    border:1px solid black;
+    width:20px;
+    height:80px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-10px;
+    margin-top:-40px;
+    font-size:0;
+    border-radius: 10px;;
+}
+.wh{
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background:black;
+    position:absolute;
+    left:50%;
+    margin-left:-5px;
+    top:10px;
+    animation:wheelAni 1s ease 0s infinite alternate;
+}
+@keyframes wheelAni {
+    0%{top:10px;}
+    100%{top:60px;}
+}
+.cursor.on.big .wheelAni{display:block;}
+.cursor.on.big+.cursorGuideBox{display:block;}
+/* 마우스커서를 따라다니는 설명텍스트 영역 */
+.cursorGuideBox{
+    display:none;
+    pointer-events: none;
+    position:fixed;
+    left:0;top:0;
+    width:150px;
+    border:1px solid black;
+    background:#f37c22;
+    padding:10px;
+    font-family: 'Poppins', sans-serif;
+    font-size:18px;
+    font-weight: 500;
+    border-radius: 20px;
+    word-break: keep-all;
+    z-index: 300;
+    text-align: center;
+}
+
 /* header */
 header{
     /* border: 1px solid red; */
@@ -173,6 +248,7 @@ header>p{
     height: 100%;
     background: #fff;
     position: relative;
+    transition: all 0.5s ease 0s ;
 }
 .menu .gnb>li:last-of-type{
     border-right: 0;
@@ -198,10 +274,14 @@ header>p{
     content: "";
     width: 100%;
     height: 0;
-    background: #f37c22; 
+    background: #191919e9; 
     position: absolute;
     left: 0; bottom: 0; 
     transition: all 0.5s ease 0s ;
+}
+.gnb>li:hover{
+    color: #f37c22;
+    font-weight: 500;
 }
 .gnb>li:hover:after{
     content: "";
@@ -794,7 +874,7 @@ figure .c2{
 }
 
 .main-content{
-    background: #fff;
+    background: #fafafa;
     width: 100%;
     height: 8000px;
     position: relative;
@@ -812,7 +892,7 @@ figure .c2{
 .section{
     height:42px;
     box-sizing: border-box;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .b_title{
     border-top: 1px solid #191919;
@@ -842,16 +922,21 @@ figure .c2{
     height: calc(100vh - 336px);
     background: #fafafa;
 }
-.b_content>img{
+.b_content>figure{
+    width: 880px;
+    height: 580px;
+    overflow: hidden;
+    margin-left: 80px;
+}
+.b_content>figure img{
     width: 880px;
     height: 580px;
     object-fit: cover;
-    margin-left: 80px;
-    /* cursor: pointer; */
+    cursor: pointer;
     filter: grayscale(1);
     transition: all 0.5s ease 0s;
 }
-.b_content>img:hover{
+.b_content>figure:hover img{
     filter: grayscale(0);
 }
 .btext{
@@ -877,7 +962,7 @@ figure .c2{
 }
 .b_color{
     display: flex;
-    margin-top: 45%;
+    margin-top: 35%;
 }
 .b_color>li{
     width: 50px;
@@ -1165,7 +1250,7 @@ figure .c2{
     line-height: 36px;
     color: #fff;
     height: 180px;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-left: 95px;
     box-sizing: border-box;
     opacity: 0;
@@ -1192,6 +1277,10 @@ figure .c2{
     right: 5px; top: 60%;
     cursor: pointer;
     transition: all 0.5s ease 0s;
+}
+.sub_text>li>p>span.beforeSub{
+
+    right: 110px; top: 60%;
 }
 .sub_text>li>p>span:hover{
     background: #f37c22;
@@ -1243,11 +1332,17 @@ figure .c2{
     transform: translateX(-50%);
     z-index: 20;
 }
+@keyframes endarcAni{
+    0%{stroke-dashoffset: 474;}
+    100%{stroke-dashoffset: 0;}
+}
 .conArc{
     stroke: #fff;
     stroke-miterlimit: 10;
     fill: none;
     stroke-width: 3px;
+    stroke-dasharray: 474;
+    animation: endarcAni 2s ease 0s infinite;
 }
 .circle2{
     border-radius: 50%;
@@ -1257,7 +1352,7 @@ figure .c2{
     position: absolute;
     left: 50%;top: 50%;
     transform: translate(-50%,-50%);
-    animation: circleAni 2s ease 0.2s infinite;
+    animation: circleAni 2s ease 0s infinite;
 }
 @keyframes circleAni{
     0%{transform: translate(-50%,-50%) scale(1.1);}

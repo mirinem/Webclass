@@ -23,11 +23,15 @@ $(document).ready(function(){
             let count = distance / ((targetHeight-areaHeight)/8)
             let idx = Math.floor(count)
             let idx_per = count-idx
+            let idx_per2 = 1-idx_per
             console.log(idx,idx_per)
 
             let conHeight = $(".movingArea2>li").eq(idx).find(".b_content").height()
             console.log(conHeight)
             $(".movingArea2>li").eq(idx).css("height",(idx_per*conHeight)+42+"px")
+            if(!(idx-1<0)){
+                $(".movingArea2>li").eq(idx-1).css("height",(idx_per2*conHeight)+42+"px")
+            }            
 
 
         }
