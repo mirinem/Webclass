@@ -1417,6 +1417,12 @@ footer>div .Fcontents{
     font-size: 26px;
     line-height: 40px;
 }
+.Fcontents>b{
+    color: transparent;
+}
+.Fcontents>b:hover{
+    color: #000;
+}
 .Fbotxt{
     font-size: 18px;
 }
